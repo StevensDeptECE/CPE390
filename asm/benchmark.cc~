@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+extern "C" double hypot(double a, double b);
+
+void testAccuracy() {
+	cout << setprecision(15);
+	cout << hypot(3,4) << '\n';
+	cout << hypot(1,1) << '\n';
+}	
+
+int main() {
+	//	testAccuracy();
+	const int numTrials = 1000000000; // 10^9 trials
+	for (int i = 0; i < numTrials; i++) {
+		double y = hypot(3.0, 4.0);
+	}
+}

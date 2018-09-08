@@ -1,0 +1,20 @@
+all: hw1 Polynomial hypot polynomialopt.s polynomial.s
+
+hw1: hw1.cc add.s
+	g++ -g hw1.cc add.s -o hw1
+
+Polynomial: Polynomial.cc hwPolymain.cc
+	g++ -g Polynomial.cc hwPolymain.cc -o Polynomial
+
+hypot: hypot.cc fastdangeroushypot.s
+	g++ -g hypot.cc fastdangeroushypot.s -o hypot
+
+polynomialopt.s: Polynomial.cc
+	g++ -S -O2 Polynomial.cc -o polynomialopt.s
+
+polynomial.s: Polynomial.cc
+	g++ -S Polynomial.cc -o polynomial.s
+
+
+clean:
+	rm *.o hw1 Polynomial
