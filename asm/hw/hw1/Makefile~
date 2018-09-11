@@ -1,0 +1,2 @@
+hw1addsetup: hw1setup.cc add.cc
+	g++ hw1setup.cc add.cc -o hw1addsetup

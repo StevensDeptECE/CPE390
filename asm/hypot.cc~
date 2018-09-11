@@ -1,0 +1,6 @@
+#include <cmath>
+using namespace std;
+
+double hypotopt(double a, double b) {
+	return sqrt(a*a + b*b);
+}

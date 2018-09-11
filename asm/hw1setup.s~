@@ -32,7 +32,7 @@ main:
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
 	.seh_setframe	%rbp, 0
-	subq	$32, %rsp0
+	subq	$32, %rsp
 	.seh_stackalloc	32
 	.seh_endprologue
 	call	__main

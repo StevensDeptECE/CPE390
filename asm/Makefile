@@ -18,11 +18,17 @@ polynomialopt.s: Polynomial.cc
 polynomial.s: Polynomial.cc
 	g++ -S Polynomial.cc -o polynomial.s
 
-hypot.o: hypot.cc
-	g++ -g -O2 -c hypot.cc
+hypotopt.o: hypotopt.cc
+	g++ -g -O2 -c hypotopt.cc
 
-benchmark: benchmark.cc hypot.o
-	g++ -g -O2 benchmark.cc hypot.o -o benchmark
+hypot.o: hypot.cc
+	g++ -g -c hypot.cc
+
+asminline.o: asminline.s
+	as -c asminline.s
+
+benchmark: benchmark.cc hypot.o hypotopt.o fastdangeroushypot.o asminline.o
+	g++ -g -O2 benchmark.cc fastdangeroushypot.o hypot.o hypotopt.o asminline.s -o benchmark
 
 hypotavx.o: hypot.cc
 	g++ -g -O2 -march=skylake -c hypot.cc -o hypotavx.o

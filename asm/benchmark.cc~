@@ -12,8 +12,10 @@ void testAccuracy() {
 
 int main() {
 	//	testAccuracy();
-	const int numTrials = 1000000000; // 10^9 trials
-	for (int i = 0; i < numTrials; i++) {
-		double y = hypot(3.0, 4.0);
+	const uint64_t numTrials = 5000000000L; // 5 x 10^9 trials
+	double sum = 0;
+	for (uint64_t i = 0; i < numTrials; i++) {
+		sum += hypot(3.0, 4.0);
 	}
+	cout << sum << '\n';
 }
