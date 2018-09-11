@@ -1,4 +1,0 @@
-void countdown(int n) {
-	for (; n > 0; n--)
-		cout << ' ';
-}
