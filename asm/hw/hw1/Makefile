@@ -1,5 +1,12 @@
 all: hw1addsetup hw1setup.s add.s hw1setupopt.s addopt.s 
 
+# your job, should you choose  to accept it:
+# write add.s
+# compile the two together
+
+hw1:  hw1.cc add.s
+	g++ hw1.cc add.s -o hw1
+
 hw1addsetup: hw1setup.cc add.cc
 	g++ hw1setup.cc add.cc -o hw1addsetup
 
