@@ -6,31 +6,33 @@ OPT	:= -O2	# optimization is on by default, we don't need to see horrible C code
 # is new enough, it is now the default in g++ 7.3
 CXX	:= g++ -std=c++11 $(DEBUG) $(OPT)
 
-all: hw1setup hw1 
+all: hw2setup hw2
 
 # build the code with just C++ so you can see what the code should look like
 # you can make your assembler code faster though
-hw1setup: hw1.o cppadd.o
-	$(CXX) hw1.o cppadd.o -o hw1setup
+hw2setup: hw2.o cppadd128.o
+	$(CXX) hw2.o cppadd128.o -o hw2setup
 
 # this is the homework, to take a C++ program and write an assembler function
-hw1:  hw1.o add.s
-	$(CXX) hw1.o add.o -o hw1  #link the two .o files together into a program
+hw2:  hw2.o add128.s
+	$(CXX) hw2.o add.o -o hw2  #link the two .o files together into a program
 
 # Compile the main.  In order to remove lots of junk code
 # we use -O2 to optimize.  Look at the calling code and try to
 # understand what is happening in main.
-hw1.o: hw1.cc
-	$(CXX) -c hw1.cc   # compile only
-	$(CXX) -S hw1.cc   # generate assembler hw1.s for you to read
+hw2.o: hw2.cc
+	$(CXX) -c hw2.cc   # compile only
+	$(CXX) -S hw2.cc   # generate assembler hw1.s for you to read
 
-cppadd.o: cppadd.cc
-	$(CXX) -c cppadd.cc   # compile only
+cppadd128.o: cppadd128.cc
+	$(CXX) -c cppadd128.cc   # compile only
+	$(CXX) -S cppadd128.cc   # generate the assembler to look at
 
-add.o: add.s
-	as add.s	# run the assembler and generate the .o file
+add128.o: add128.s
+	as add128.s	# run the assembler and generate the .o file
 
 #note: do not delete add.s, that's your source code!
-#note: *.exe is deleted for window systems, on linux hw1 and hw1setup
+#note: deleting *.exe below is under windows.  On linux you must delete hw2 and hw2setup
 clean:
-	rm cppadd.s *.o *.exe hw1 hw1setup
+	rm cppadd128.s *.o *.exe hw2 hw2setup
+
