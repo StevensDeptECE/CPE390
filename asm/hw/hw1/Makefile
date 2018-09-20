@@ -14,7 +14,7 @@ hw1setup: hw1.o cppadd.o
 	$(CXX) hw1.o cppadd.o -o hw1setup
 
 # this is the homework, to take a C++ program and write an assembler function
-hw1:  hw1.o add.s
+hw1:  hw1.o add.o
 	$(CXX) hw1.o add.o -o hw1  #link the two .o files together into a program
 
 # Compile the main.  In order to remove lots of junk code
