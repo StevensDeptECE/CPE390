@@ -9,8 +9,8 @@ using namespace std;
 	fact(n) should count from 1 to n and multiply all: 1*2*3*...*n
      example: fact(5) = 120
  */
-extern void count(int n);
-extern void countDown(int n);
+extern void count(int n); // _Z5counti
+extern void countDown(int n); // _Z9countDowni
 extern int sum(int a, int b);
 extern int fact(int n);
 

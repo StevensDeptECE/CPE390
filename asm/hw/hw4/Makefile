@@ -2,7 +2,7 @@ CXX	:= g++ -std=c++11 -g -O2
 
 all: hw4setup hw4 hw4inline
 
-hw4: polymain.o eval.s
+hw4: polymain.cc eval.s
 	$(CXX) polymain.cc eval.s -o hw4
 
 # build the code with just C++ so you can see what the code should look like
@@ -15,8 +15,8 @@ hw4inline: polymain.cc Polynomial.cc
 
 # Compile the main and generate assembler to look at
 polymain.o: polymain.cc
-	$(CXX) -c polymain.cc
 	$(CXX) -S polymain.cc
+	$(CXX) -c polymain.cc
 
 Polynomial.o: Polynomial.cc
 	$(CXX) -S Polynomial.cc

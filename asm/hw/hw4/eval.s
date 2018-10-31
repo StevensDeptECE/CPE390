@@ -5,6 +5,9 @@ _ZNK10Polynomial4evalEd:
 	movq	8(%rcx), %rdx
 	movl	(%rcx), %ecx	;# ecx has the degree of the polynomial
 	movsd	(%edx), %xmm0   ;# load the first coefficient into xmm0
+				;# 4x^3 + 2x^2 - 3x + 4
+				;# (((4*x) + 2) * x - 3) * x + 4 Horner's form
+	;# 1.0 2.0 1.0      ((1.0 * x) + 2.0) * x + 1.0
 .L1:	
 	add	$8, %rdx        ;# point to second coefficient
 	mulsd	%xmm1, %xmm0    ;# multiply by x

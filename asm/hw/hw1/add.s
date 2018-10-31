@@ -5,17 +5,6 @@
 	.seh_proc	_Z3addii
 _Z3addii:
 .LFB0:
-	pushq	%rbp
-	.seh_pushreg	%rbp
-	movq	%rsp, %rbp
-	.seh_setframe	%rbp, 0
-	.seh_endprologue
-	movl	%ecx, 16(%rbp)
-	movl	%edx, 24(%rbp)
-	movl	16(%rbp), %edx
-	movl	24(%rbp), %eax
-	addl	%edx, %eax
-	popq	%rbp
+	addl   %ecx, %edx
+	movl   %edx, %eax
 	ret
-	.seh_endproc
-	.ident	"GCC: (Rev2, Built by MSYS2 project) 6.2.0"
