@@ -56,4 +56,46 @@ int main() {
 			for (int j = i*i; j <= n; j += 2*i)
 				isPrime[j] = false;
 
+
+
+	/*
+		how to do all this with bit manipulation
+		suggestion: 0x80000000   1
+		
+		n = 64   n = 62
+		whichWord = n / sizeofyourword = n / 32    faster: LSR n, #5
+		isPrime[whichWord]   baselocation + 4 * whichword
+
+		load this word into register R3
+
+		now check which bit in R3
+		whichbit = n % 32    // AND with 32-1 = 31 1 1111 0x1F
+		1 << whichbit       ; //LSL 1, whichbit
+
+		how to test whether a bit is true
+		101010101011110101010101x1101
+    00000000000000000000000010000   1 << whichbit
+    =============================
+    000000000000000000000000x0000
+
+		11111111111111111111111111111111  step1: everyone is prime
+
+		10101010101010101010101010101111  step2: eliminate all evens except 2
+
+		10101010101010101010101010101111  step3: for i = 3 to n step 2
+		                                            if isprime[i] look up bit i
+																								  for j = i*i; j <= n; j += 2*i
+																									   isprime[j] = false
+		10101010101010100010101010101111 
+    00000000000000000000001000000000      1 << bitpos
+    11111111111111111111110111111111      invert MVN
+    ================================
+    10101010101010100010100010101111      AND (NOT (1 << bitpos))  
+		                                      in c++: bits[pos] & ~(1<<bitpos)
+conditional instructons
+    ADDnz  R2, R2, #1
+
+
+	*/
+
 }
