@@ -1,5 +1,5 @@
-	.globl _Z12eratosthenesk
-_Z12eratosthenesk:
+	.globl _Z12eratosthenesPjj
+_Z12eratosthenesPjj:	
 	movl	#3, %r11	
 .L1:
 	movl	%r11, %r10
