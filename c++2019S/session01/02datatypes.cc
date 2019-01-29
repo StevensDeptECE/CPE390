@@ -4,6 +4,33 @@ int main() {
 	std::cout << "testing\n";
 	int a; // integer signed or not? how big? +/- 2.1billion
 	unsigned int c; // 0 to 4.2billion
+	/*
+		926 = 9 * 100 + 2 * 10 + 6
+
+    421
+		000 = 0
+		001 = 1
+		010 = 2
+		011 = 3
+		100 = 4
+		101 = 5
+		110 = 6
+		111 = 7
+
+signed
+    -21
+		000 = 0
+		001 = 1
+		010 = 2
+		011 = 3
+		100 = -4
+		101 = -3
+		110 = -2
+		111 = -1
+
+
+
+	 */
 	int a1 = 1234567890;
 	float f = 1.234567;
 	float f2 = 1.234567e+22;
