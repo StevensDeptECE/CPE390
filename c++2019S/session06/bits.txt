@@ -13,7 +13,7 @@ difficulty in passing the course
 Math:
 
 convert the following to binary:
-13 =
+13 = 1101
 73 =
 155 =
 
