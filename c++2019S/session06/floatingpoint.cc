@@ -8,7 +8,7 @@ void printFloatAsHex(float f) {
 
 int main() {
   cout << 64 << '\t' << 128 << '\t' << 256 << '\t' << 123 << '\n';
-  cout << hex <<
+  cout <<  hex <<
     64 << '\t' << 128 << '\t' << 256 << '\t' << 123 << '\n';
   cout << oct <<
     64 << '\t' << 128 << '\t' << 256 << '\t' << 123 << '\n';
@@ -17,5 +17,10 @@ int main() {
   printFloatAsHex(4.0f);
   printFloatAsHex(-1.0f);
   printFloatAsHex(1.0f / 0.0f);
+  float g = 0.0;
+  cout << g << '\n';
+  int*p = (int*)&g;
+  *p = 0x003a0001;
+  cout << g << '\n';
 }
   

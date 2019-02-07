@@ -18,7 +18,7 @@ convert the following to binary:
 155 =
 
 convert the following hex to binary
-0xFEDC1234 =
+0xFEDC1234 = 1111 1110  
 0xABAB5353 =
 0xDEADBEEF =
 
