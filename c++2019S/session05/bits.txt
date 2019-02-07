@@ -1,0 +1,53 @@
+Everyone must be able to:
+
+Write a for loop that counts from a to b (example, from 0 to 9 or from 1 to 10)
+
+compute the Sum of the numbers in a loop
+
+Compute the product of the numbers in a loop
+
+If you cannot compute these simple things, you will have great
+difficulty in passing the course
+
+
+Math:
+
+convert the following to binary:
+13 =
+73 =
+155 =
+
+convert the following hex to binary
+0xFEDC1234 =
+0xABAB5353 =
+0xDEADBEEF =
+
+write a table showing a single hex digit 0 through F and the 4 bits
+that correspond to each
+
+Write a table showing a single octal (base 8) digit 0 through 7 and
+the 3 bits corresponding to each
+
+In unix, permissions on a file are shown using three letters r, w, x
+meaning can be read, can be written, can be executed.
+
+Here is a typical  permissions: -rw-r--r--
+if the - means 0 and the letter means 1, we can write this as:
+
+-rw-r--r--
+0110100100
+
+forgetting about the first bit, we have 9 bits. Express the number as three octal digits
+rw-r--r--
+110100100
+
+the command to set this permission would be:
+
+chmod _____ filename
+
+For a 3-digit computer, write a table showing what each bit combination means if we interpret the number as signed integer, or unsigned integer
+
+For a 32-bit computer, like ARMv6, what is:
+
+0xFFFFFFFE + 0x00000003 =
+

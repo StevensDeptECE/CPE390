@@ -1,0 +1,30 @@
+ls
+ls -l
+cd
+cd ~/
+cd ..
+cd git/CPE390
+git clone git@github.com:StevensDeptECE/CPE390.git
+g++ a.cc
+g++ -S a.cc
+g++ -O2 a.cc
+g++ -S -O2 a.cc
+g++ a.cc b.cc
+g++ -c a.cc
+g++ -c b.cc
+g++ a.o a.b -o myprog
+make
+git add .
+git commit -m"my comment"
+git push
+git pull
+
+cp file newfile
+cp -r dir1 dir2
+mv file newname
+mv file ..
+mv file ../newname
+chmod +x file
+chmod -w file
+chmod 644 file
+ssh-keygen -t rsa
