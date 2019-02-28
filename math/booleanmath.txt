@@ -143,19 +143,32 @@ x^49 = x^1 * x^16 * x^32
 power(x, n)
   prod = 1
   while n > 0
-    if n is odd
+    if n is odd    n % 2 != 0
       prod = prod * x
     x = x * x
-    n = n / 2
+    n = n / 2    --> LSR 
   end
 end
 
+m is a power of 2
+n MOD m =  n AND (m-1)
 
 
 
+0..31 00000..  11111
+
+32 100000
+33 100001
+34 100010
+35 100011
+36 100100
 
 
+example: set(bits, 33)
+bits
+bits[0]					bits[1]
+00000000 00000000 00000000 00000000    00000000 00000000 00000000 10000010
 
+bits+0	 	  	   	       bits+4
 
-
-
+example: set(bits, 39)   39 / 32 = 1	39 mod 32 = 7
