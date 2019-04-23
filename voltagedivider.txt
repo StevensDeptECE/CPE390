@@ -1,0 +1,45 @@
+Vcc = 3.3
+Gnd = 0.0
+
+two resistors in series
+
+R1 = 10   R2 = 10k
+
+V = 3.3V
+V1 = V(R1/(R1+R2))   = 10/10010  = .001
+
+R2 = 1k
+V1 = V(R1/(R1+R2)) = 10/(10+1000) = .01
+
+Optimal: whatever value the thermistor is in the temperature range,
+that's what you want the fixed resistor to be
+
+
+Every device is different.  No two are the same
+
+ice water = 0C	(bath of ice + water)
+
+boiling water = 100C =
+
+A/D   n1 @ 0C
+      n2 @ 100C
+
+assume: exponential decay   Ae^-kt
+
+Brutal lesson: electronics is perfect and uniform? NOT.
+
+Bell curve of values for devices
+
+1. Resistors 4.7k ohm +/- _____ 5%	1%  tolerance = f($$$)
+
+Intel chip 2.6Ghz, 3.0Ghz
+
+modern manufacturing: Test, and sell quality for more.
+
+
+
+
+
+
+
+
