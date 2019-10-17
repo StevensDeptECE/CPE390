@@ -1,5 +1,7 @@
 	@ paper assembler practice: learn the instructions
 	@ for each instruction write down the value of the register(s) affected next to it
+	.global _Z1fv
+_Z1fv:	
 	mov	r0, #2		@ example: r0 = 2
 	ldr	r1, =#100	@
 	mov	r2, #5		@
