@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# beautiful bash cheat sheet: https://devhints.io/bash
+
+# source this file in your terminal to color the user and host
+# NOTE: source and . are equivalent (execute script in this shell)
+
+# These are the recommended steps on Ubuntu (and possibly other distros):
+# 1) create a personal bin folder: mkdir ~/bin
+# NOTE: if ~/bin exists, Ubuntu automatically adds it to $PATH, which means
+#       that all scripts in ~/bin are available as regular commands
+# 2) store this file in ~/bin
+# 3) make sure this file has executing permissions: chmod 740 highlight_ps1
+# 4) append following line to ~/.bashrc:
+# source highlight_ps1
+# NOTE: ~/.bashrc is executed every time a terminal is launched
+
+# all possible codes: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# default: 41 = red background, 39 = white text
+STYLE_CODE="41;39"
+
+# NOTE: posix regexp: https://www.regular-expressions.info/posix.html
+# wrap \u@\h in style tags
+# open tag: \e[STYLE_CODESm
+# closing tag: \e[0m
+# NOTE: literal \ => \\
+PS1=${PS1/\\u@\\h/\\e[${STYLE_CODE}m\\u@\\h\\e[0m}
