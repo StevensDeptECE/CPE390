@@ -32,6 +32,10 @@ loop4:
 	add	r0, r0, #1
 testme:	
 	cmp	r0, #5
-	bge	loop4
-out2:	
+	blt	loop4
 
+
+	mov	r0, #100
+loop5:	
+	subs	r0, #1
+	bgt loop5
