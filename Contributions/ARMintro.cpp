@@ -1,9 +1,18 @@
 /*Intro to ARM
+//PC-> program counter
 
+	MOV R0, #3    // immediate mode
+
+  LDR r0, =#0xFF2C3EAA // load a number from some memory location (probably relative to PC)
+  
 	//LOADING VARIABLES
 	MOV R0, R1		//moves value of R1 into R0
 
-	LDR R0, R1		//loads register R2 with value of R3 (used to move data from memory)
+	MVN R3, R1   // r3 = NOT(r1)
+  MVN r3,r3    // flip every bit (NOT) r3
+
+	// indexed mode
+	LDR R0, [R1]		//loads register R0 with value of R3 (used to move data from memory)
 
 	//MATHEMATICAL OPERATIONS
 	ADD R0, R0, R1	//R0=R0+R1
@@ -11,6 +20,9 @@
 	SUB R0, R0, R1	//R0=R0-R1
 
 	MUL R0, R0, R1	//R0=R0*R1
+  //  9999 + 9999 = 19998  overflow with addition
+  //  9999 * 9999 = 
+  //  2^31 * 2^31 = 2^62 
 
 	//BITS
 	//true = 1; false =0
