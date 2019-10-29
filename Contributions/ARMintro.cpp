@@ -1,4 +1,6 @@
 /*Intro to ARM
+By: Allison Buffenbarger
+
 //PC-> program counter
 
 	MOV R0, #3    // immediate mode
@@ -12,7 +14,7 @@
   MVN r3,r3    // flip every bit (NOT) r3
 
 	// indexed mode
-	LDR R0, [R1]		//loads register R0 with value of R3 (used to move data from memory)
+	LDR R0, [R1]		//loads register R0 with value of [R1] (used to move data from memory)
 
 	//MATHEMATICAL OPERATIONS
 	ADD R0, R0, R1	//R0=R0+R1
