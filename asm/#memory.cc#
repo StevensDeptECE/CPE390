@@ -1,0 +1,5 @@
+int main() {
+	char msg[] = "hello testing 123";
+	int sum = 0;
+	for (int i = 0; msg[i] != '\0'; i++)
+		sum += msg[i]; // *(msg +i)
