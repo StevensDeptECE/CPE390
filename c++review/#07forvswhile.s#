@@ -25,11 +25,11 @@ _Z1fj:
 	@ link register save eliminated.
 	subs	r2, r0, #0
 	beq	.L4
-	mov	r3, #1
+	mov	r3, #1     @ r3=1
 	mov	r0, #0
 .L3:
-	add	r0, r0, r3
-	add	r3, r3, #1
+	add	r0, r0, r3  @r0=r0+r3
+	add	r3, r3, #1  @r3=r3+1
 	cmp	r2, r3
 	bcs	.L3
 	bx	lr
