@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# beautiful bash cheat sheet: https://devhints.io/bash
+
+# source this file in your terminal to color the user and host
+# EXAMPLE USE CASE: run this script on your raspberry pi, so the ssh prompt
+# becomes distinguishable from the prompt on your laptop
+
+# These are the recommended steps on Ubuntu (and possibly other distros):
+# 1) create a personal bin folder: mkdir ~/bin
+# NOTE: if ~/bin exists, Ubuntu automatically adds it to $PATH, which means
+#       that all scripts in ~/bin are available as regular commands
+# 2) store this file in ~/bin
+# 3) make sure this file has executing permissions: chmod 740 highlight_ps1
+# NOTE: if you restart the terminal, executing highlight_ps1 styles $PS1
+# 4) to do this automatically, append following line to ~/.bashrc:
+# source ~/bin/highlight_ps1
+# NOTE: ~/.bashrc is executed every time a terminal is launched
+# NOTE: source cannot leverage the fact that highlight_ps1 is accessible via $PATH :(
+
+# all possible codes: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# default: 41 = red background, 39 = white text
+STYLE_CODE="41;39"
+
+# NOTE: posix regexp: https://www.regular-expressions.info/posix.html
+# wrap \u@\h in style tags (open: \e[STYLE_CODESm; close: \e[0m)
+# NOTE: literal \ => \\
+PS1=${PS1/\\u@\\h/\\e[${STYLE_CODE}m\\u@\\h\\e[0m}
