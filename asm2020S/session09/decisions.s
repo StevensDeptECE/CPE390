@@ -115,6 +115,76 @@ _Z1hi:
 	.cantunwind
 	.fnend
 	.size	_Z1hi, .-_Z1hi
+	.align	2
+	.global	_Z7forloopi
+	.syntax unified
+	.arm
+	.fpu vfp
+	.type	_Z7forloopi, %function
+_Z7forloopi:
+	.fnstart
+.LFB1483:
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, r5, r6, lr}
+	.save {r4, r5, r6, lr}
+	subs	r5, r0, #0
+	pople	{r4, r5, r6, pc}
+	mov	r4, #0
+.L24:
+	add	r4, r4, #1
+	bl	_Z4funcv
+	cmp	r5, r4
+	bne	.L24
+	pop	{r4, r5, r6, pc}
+	.fnend
+	.size	_Z7forloopi, .-_Z7forloopi
+	.align	2
+	.global	_Z8forloop2i
+	.syntax unified
+	.arm
+	.fpu vfp
+	.type	_Z8forloop2i, %function
+_Z8forloop2i:
+	.fnstart
+.LFB1484:
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, r5, r6, lr}
+	.save {r4, r5, r6, lr}
+	subs	r5, r0, #0
+	pople	{r4, r5, r6, pc}
+	mov	r4, #0
+.L29:
+	mov	r0, r4
+	add	r4, r4, #1
+	bl	_Z4funci
+	cmp	r5, r4
+	bne	.L29
+	pop	{r4, r5, r6, pc}
+	.fnend
+	.size	_Z8forloop2i, .-_Z8forloop2i
+	.align	2
+	.global	_Z7dowhilei
+	.syntax unified
+	.arm
+	.fpu vfp
+	.type	_Z7dowhilei, %function
+_Z7dowhilei:
+	.fnstart
+.LFB1485:
+	@ args = 0, pretend = 0, frame = 0
+	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}
+	.save {r4, lr}
+	mov	r4, #101
+.L32:
+	bl	_Z4funcv
+	subs	r4, r4, #1
+	bne	.L32
+	pop	{r4, pc}
+	.fnend
+	.size	_Z7dowhilei, .-_Z7dowhilei
 	.section	.text.startup,"ax",%progbits
 	.align	2
 	.global	main
@@ -124,30 +194,30 @@ _Z1hi:
 	.type	main, %function
 main:
 	.fnstart
-.LFB1483:
+.LFB1486:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}
 	.save {r4, lr}
 	mov	r4, #100
-.L22:
+.L36:
 	bl	_Z4funcv
 	subs	r4, r4, #1
-	bne	.L22
-.L23:
+	bne	.L36
+.L37:
 	mov	r0, r4
 	add	r4, r4, #1
 	bl	_Z4funci
 	cmp	r4, #100
-	bne	.L23
-	ldr	r1, .L27
-	ldr	r0, .L27+4
+	bne	.L37
+	ldr	r1, .L41
+	ldr	r0, .L41+4
 	bl	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	mov	r0, #0
 	pop	{r4, pc}
-.L28:
+.L42:
 	.align	2
-.L27:
+.L41:
 	.word	.LC1
 	.word	_ZSt4cout
 	.fnend
@@ -159,21 +229,21 @@ main:
 	.type	_GLOBAL__sub_I__Z1fv, %function
 _GLOBAL__sub_I__Z1fv:
 	.fnstart
-.LFB1923:
+.LFB1926:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}
-	ldr	r4, .L31
+	ldr	r4, .L45
 	mov	r0, r4
 	bl	_ZNSt8ios_base4InitC1Ev
 	mov	r0, r4
-	ldr	r2, .L31+4
-	ldr	r1, .L31+8
+	ldr	r2, .L45+4
+	ldr	r1, .L45+8
 	pop	{r4, lr}
 	b	__aeabi_atexit
-.L32:
+.L46:
 	.align	2
-.L31:
+.L45:
 	.word	.LANCHOR0
 	.word	__dso_handle
 	.word	_ZNSt8ios_base4InitD1Ev
