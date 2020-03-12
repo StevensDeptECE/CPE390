@@ -8,8 +8,6 @@ void quadratic(double a, double b, double c, double& x1, double& x2) {
 	x1 = (-b - disc) / (2*a);
 	x2 = (-b + disc) / (2*a);
 }
-	
-
 
 double mysqrt(double x) {
 	double guess = x/2;
@@ -18,10 +16,8 @@ double mysqrt(double x) {
 	} while (abs(guess - x/guess)> .00000001);
 	
 }
+
 int main() {
-	int i = 2;
-	g(i); // will print i (2) but will also set i = 99
-	
 	double a, b, c, x1, x2;
 	cin >> a >> b >> c;
 	cout << a + b << '\n';
@@ -29,7 +25,25 @@ int main() {
 	cout << a * b << '\n';
 	cout << a / b << '\n';
 	/*
-		ldr r0, // [pc, #????] [cout]
+		memory: registers (16),  cache (megabytes), DRAM (gigabytes, but takes ~12 .. 60 clock)
+
+		ldr r0, // [pc, #????] r0 = [cout]
+		vpush {d6,d7}
+		vldr d7, b
+    vldr d0, [sp, #8 ]  @ we have pushed this recently, so it's stored in...
+		vldr d6, a
+
+		vadd.64 d0, d6, d7  @d0 = a + b
+    bl print   @ we must assume that print could destroy r0..r3, d0..d3
+		vsub.64 d0, d6, d7 @ d0 = a - b
+    bl print
+		vmul.64 d0, d6, d7  @d0 = a * b
+    bl print
+
+    pop {d6,d7}
+
+
+
 
 		vldr d1, [somelocation]
 		vldr d2, [someotherlocation]
