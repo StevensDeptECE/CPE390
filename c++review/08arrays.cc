@@ -1,3 +1,5 @@
+double mean(int a[], int n);
+
 int main() {
 	//       a[0]  a[1]  a[2]
 	int a[] = {1,   2,    3};

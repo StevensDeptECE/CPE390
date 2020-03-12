@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int forloop(int n) {
+int f(uint32_t n) {
 	int sum = 0;
 	for (int i = 1; i <= n; i++)
 		sum += i;
 	return sum;
 }
 
-int whileloop(int n) {
+int g(uint32_t n) {
 	int sum = 0;
 	int i = 1;
 	while (i <= n) {
@@ -36,7 +36,9 @@ int add(int a, int b) {
 int main() {
 	int n;
 	cin >> n;
-	cout << forloop(n);
-	cout << whileloop(n);
-	cout << dowhileloop(n);
+	cout << f(n) << flush;
+	int x = 0;
+	cout << 5 / x << '\n'; // divide by zero CRASH!!!!
+
+	cout << '\n';
 }

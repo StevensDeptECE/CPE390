@@ -1,8 +1,16 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
-	for (float x = 0; x < 100; x += 0.1) {
+	cout << setprecision(7);
+	for (float x = 0; x < 10; x += 0.1) {
+		cout << x << ' ';
+	}
+	cout << '\n';
+	
+	cout << setprecision(15);
+	for (double x = 0; x < 10; x += 0.1) {
 		cout << x << ' ';
 	}
 	cout << '\n';

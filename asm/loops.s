@@ -63,16 +63,29 @@ out:
 	mov	r0, #0
 loop3:	
 	cmp	r0, #5
-	bge	out
+	bge	out2
 	add	r0, r0, #1
 	b loop3
 out2:	
 
-	mov	r0, #6
+
+	
+	mov	r0, #0
 	b testme
 loop4:	
 	add	r0, r0, #1
 testme:	
+<<<<<<< HEAD
+	cmp	r0, #100
+	blt	loop4
+
+
+
+	mov	r4, #100
+.L2:
+	subs	r4, r4, #1
+	bne	.L2
+=======
 	cmp	r0, #5
 	blt	loop4
 
@@ -81,3 +94,4 @@ testme:
 loop5:	
 	subs	r0, #1
 	bgt loop5
+>>>>>>> 52812aeb688e15c73857ec352cd0b9e164309b8c

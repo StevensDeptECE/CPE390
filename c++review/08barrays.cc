@@ -6,6 +6,7 @@ double avgFirstAndLast(int x[], int n) {
 		cout << x[i] << ' ';
 	cout << '\n';
 	return (x[0] + x[n-1]) / 2.0;
+	// type promotion (automatically convert int->double)
 }
 
 int main() {
