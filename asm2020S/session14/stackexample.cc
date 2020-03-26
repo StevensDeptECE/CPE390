@@ -10,9 +10,16 @@ void f(int,int,int,int,int);
 void g(int x[]);
 void h(int x[]);
 
+void faster();
+
+void call2deep() {
+	f();
+}
+
 void bench() {
 	int* p = new int[40000000];
 	g(p);
+	h(p);
 	clock_t t0 = clock();
 	g(p);
 	clock_t t1 = clock();
@@ -32,6 +39,7 @@ int main() {
 	f(3,4,5);
 	f(3,4,5,6);
 	f(3, 4, 5, 6, 7);
-
+  faster();
 	bench();
+	call2deep();
 }

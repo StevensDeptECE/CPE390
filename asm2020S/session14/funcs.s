@@ -60,3 +60,34 @@ _Z1hPi:
 	subs	r1, #1
 	bne	.L2
 	@ now r1 will be zero
+
+	.global _Z6fasterv
+_Z6fasterv:
+	push    {r4}
+	mov	r4, #7
+	mov	r3, #6
+	mov	r2, #5
+	mov	r1, #4
+	mov	r0, #3
+	bl	f
+	pop	{r4}
+	bx	lr
+
+f:
+	add	r0, r0,r1
+	add	r2, r2,r3
+	add	r2, r4
+	add	r0, r2
+	bx	lr
+
+	@ suppose g is supposed to execute a loop r0 times
+	@ what if r0 = 0 already? 
+g:
+	cmp	r0, #0
+	b	checkfirst
+.L1:
+	@ bl	something
+	subs	r0, #1
+checkfirst:
+	ble	.L1
+	bx	lr
