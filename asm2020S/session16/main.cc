@@ -17,7 +17,7 @@ void g(const int x[], int n);
 int main() {
 	const int n = 40000000;
 	int* p = new int[n];
-	f(p, n);
+	f(p, 10000);
 	clock_t t0 = clock();
 	f(p, n);
 	clock_t t1 = clock();
