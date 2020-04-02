@@ -6,7 +6,7 @@ class Fraction {
 private:
   int num, den;
 public:
-	Fraction(int n, int d) : num(n), den(d) {}
+	Fraction(int n, int d);
 	void zero();
 	friend ostream& operator <<(ostream& s, const Fraction& f);
 };

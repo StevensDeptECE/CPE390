@@ -1,10 +1,10 @@
 #include "Fraction.hh"
 /*
+	den     <----- sp + 12
   this->num     <----- sp + 8
-        den     <----- sp + 12
-
-        num     <----- sp + 0
+	
         den     <----- sp + 4
+        num     <----- sp + 0
  */
 void g() {
 	int y;
