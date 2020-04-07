@@ -24,7 +24,7 @@ _Z1fv:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}
 	.save {r4, lr}
-	mov	r4, #100
+	mov	r4, #98
 .L2:
 	bl	_Z4funcv
 	subs	r4, r4, #1
@@ -38,6 +38,11 @@ _Z1fv:
 	.arm
 	.fpu vfp
 	.type	_Z1gv, %function
+
+_Z4testii:
+	sub	r0, r0, r1
+	bx	lr
+	
 _Z1gv:
 	.fnstart
 .LFB1480:
@@ -199,7 +204,7 @@ main:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}
 	.save {r4, lr}
-	mov	r4, #100
+	mov	r4, #98
 .L36:
 	bl	_Z4funcv
 	subs	r4, r4, #1

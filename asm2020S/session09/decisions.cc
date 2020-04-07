@@ -5,7 +5,7 @@ void func();
 void func(int x);
 
 void f() {
-	for (int i = 0; i < 100; i++)
+	for (int i = 2; i < 100; i++)
 		func();
 }
 
