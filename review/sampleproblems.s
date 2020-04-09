@@ -57,6 +57,7 @@ _Z1dii:
 _Z1ev:
 	push	{r4,r5}
 	mov	r4, #44
+	mov	r5, #22
 	pop	{r4,r5}
 	bx 	lr
 	
