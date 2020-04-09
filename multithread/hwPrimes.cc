@@ -13,10 +13,9 @@ int primeCount1 = 0;
 int primeCount2 = 0;
 
 void countPrimes(int* primeCounter, int start, int end) {
-
+	// go in a loop from start to end checking for primes
   (*primeCounter)++;
- 	cout << *primeCounter << " start=" << start << " end=" << end << '\n';
-
+	// 	cout << *primeCounter << " start=" << start << " end=" << end << '\n';
 }
 
 /*
@@ -32,10 +31,8 @@ void countPrimes(int* primeCounter, int start, int end) {
 
  */
 
-int main() {
-	int n;
-	cout << "Please enter maximum number for primes=";
-	cin >> n;
+int main(int argc, char* argv[]) {
+	int n = atoi(argv[1]);
 	int a = n/2;
   thread t1(countPrimes, &primeCount1, 2, a);
   thread t2(countPrimes, &primeCount2, a+1, n);
@@ -45,6 +42,7 @@ int main() {
 	t1.join();
 	t2.join();
 
+	// right now, it says there are only two primes. Your job is to make it count primes!
 	cout << "number of primes = " <<  (primeCount1 + primeCount2) << '\n';
 
 }
