@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 using namespace std;
 
@@ -30,7 +31,7 @@ double precomputingInverse(double x, uint32_t n) {
 }
 
 double doesCompilerPrecomputeInverseForConstants(double x, double y) {
-	return (x + y) / 2;
+	return (x + y) / 3;
 }
 
 double doesCompilerOptimizeSqrtSquared(double x) {
@@ -59,13 +60,21 @@ void benchmark(const char msg[], Func f, double x, uint32_t n) {
 }
 
 int main() {
-	double x = rand(); // get a number the compiler can't predict (a variable)
-	double y = rand(); // get a number the compiler can't predict (a variable)
+	double x = 1.0 / rand(); // get a number the compiler can't predict (a variable)
+	double y = 1.0 / rand(); // get a number the compiler can't predict (a variable)
 	double d1 = 2.0 + 3.0; // constant, precomputed
 	double d2 = 2 + 3.0; // automatically type promoted, precomputed
-	cout << d1 << ' ' << d2 << '\n';
+	double d3 = x + y; // can't be optimized, compiler does not know x y
+	double d4 = x - y; // can't be optimized, compiler does not know x y
+	double d5 = x * y; // can't be optimized, compiler does not know x y
+	cout << d1 << ' ' << d2 << ' ' << d3 << '\n';
 
 	const int n = 100000000;
 	benchmark("precomputingInverse", precomputingInverse, x, n);
 	benchmark("divideBy3", divideBy3, x, n);
+	cout << doesCompilerOptimizeSqrtSquared(2.0) << '\n';
+	cout << "x=" << setprecision(15) << setw(15) << x << '\n';
+	cout << "sqrt(x)*sqrt(x)=" << setprecision(15) << setw(15) <<
+		doesCompilerOptimizeSqrtSquared(x) << '\n';
+	cout << "sqrt(-1.25)=" << doesCompilerOptimizeSqrtSquared(-1.25) << '\n';
 }
