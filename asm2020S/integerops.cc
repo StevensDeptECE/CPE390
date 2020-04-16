@@ -42,3 +42,26 @@ void programmingConstructs(int x) {
 	}		
 }
 
+int fastDivisionBy10(int a) {
+	return a / 10;
+}
+
+int fastDivisionBy16(int a) {
+	return a / 16;
+}
+
+int fastDivisionBy38(int a) {
+	return a / 38;
+}
+
+int exampleStack() {
+	int a[10];
+	int d[10]; // let's see if the optimizer gets rid of d
+	int b, c;
+	a[0] = b + c; // using uninitialized data from the stack, not bright!
+	for (int i = 1; i < 10; i++)
+		a[i] = a[i-1]; // this ensures the optimizer won't discard a
+	//	return a[9]; // we're using the values, right? (they're all garbage though)
+	// to confuse the compiler, use d in the return as well
+	return a[9] + d[9];
+}
