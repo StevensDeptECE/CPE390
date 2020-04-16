@@ -344,6 +344,16 @@ main:
 	movb	$10, 39(%rsp)
 	movq	%rax, %rdi
 	call	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@PLT
+	movsd	(%rsp), %xmm1
+	movsd	.LC6(%rip), %xmm0
+	call	fmod@PLT
+	leaq	_ZSt4cout(%rip), %rdi
+	call	_ZNSo9_M_insertIdEERSoT_@PLT
+	movl	$1, %edx
+	movq	%rbx, %rsi
+	movb	$10, 39(%rsp)
+	movq	%rax, %rdi
+	call	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@PLT
 	call	_Z11findEpsilonv
 	xorl	%eax, %eax
 	movq	40(%rsp), %rcx
