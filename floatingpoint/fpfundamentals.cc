@@ -54,7 +54,7 @@ int main() {
 	cout << pow(d3, 17) << '\n';
 	cout << exp(d3) << '\n';
 	cout << log(d3) << '\n';
-
+	cout << fmod(d2, d3) << '\n';
 		
 	findEpsilon();
 	return 0;
