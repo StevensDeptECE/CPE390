@@ -33,6 +33,15 @@ void displayBits(const char msg[], double x) {
 	cout << "\n\n";
 }
 
+double operators(double x, double y) {
+	double t1 = x + y;
+	double t2 = x - y;
+	double t3 = t1 * t2;
+	double t4 = t1 / t2;
+	return t3 + t4;
+}
+	
+
 int main() {
 	double d0 = 1.0;
 	double d1 = 2.0;
