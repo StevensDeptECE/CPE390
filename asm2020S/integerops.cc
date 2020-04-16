@@ -23,7 +23,7 @@ uint64_t f(uint64_t a, uint64_t b) {
 	return t6;
 }
 
-void programmingConstructs(int x) {
+int ifStatements(int x) {
 	int t1 = 0;
 	if (x < 0)
 		t1 = 1;
@@ -31,8 +31,11 @@ void programmingConstructs(int x) {
 		t1 = -t1;
 	else
 		t1 = ~t1;
+	return t1;
+}
 
-	for (int i = 0; i < t1; i++)
+void loops(int x) {
+	for (int i = 0; i < x; i++)
 		cout << i;
 	for (int i = x; i > 0; i--)
 		cout << i;

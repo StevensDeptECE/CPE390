@@ -43,13 +43,31 @@ _Z1fmm:
 .LFE1587:
 	.size	_Z1fmm, .-_Z1fmm
 	.p2align 4,,15
-	.globl	_Z21programmingConstructsi
-	.type	_Z21programmingConstructsi, @function
-_Z21programmingConstructsi:
+	.globl	_Z12ifStatementsi
+	.type	_Z12ifStatementsi, @function
+_Z12ifStatementsi:
 .LFB1588:
 	.cfi_startproc
+	movl	$-2, %eax
 	testl	%edi, %edi
-	jle	.L11
+	js	.L4
+	xorl	%eax, %eax
+	cmpl	$5, %edi
+	setg	%al
+	subl	$1, %eax
+.L4:
+	ret
+	.cfi_endproc
+.LFE1588:
+	.size	_Z12ifStatementsi, .-_Z12ifStatementsi
+	.p2align 4,,15
+	.globl	_Z5loopsi
+	.type	_Z5loopsi, @function
+_Z5loopsi:
+.LFB1589:
+	.cfi_startproc
+	testl	%edi, %edi
+	jle	.L18
 	pushq	%r12
 	.cfi_def_cfa_offset 16
 	.cfi_offset 12, -16
@@ -61,24 +79,35 @@ _Z21programmingConstructsi:
 	pushq	%rbx
 	.cfi_def_cfa_offset 32
 	.cfi_offset 3, -32
-	movl	%edi, %ebx
+	xorl	%ebx, %ebx
 	.p2align 4,,10
 	.p2align 3
-.L6:
+.L11:
+	movl	%ebx, %esi
+	movq	%r12, %rdi
+	addl	$1, %ebx
+	call	_ZNSolsEi@PLT
+	cmpl	%ebx, %ebp
+	jne	.L11
+	movl	%ebx, %ebp
+	leaq	_ZSt4cout(%rip), %r12
+	.p2align 4,,10
+	.p2align 3
+.L12:
 	movl	%ebp, %esi
 	movq	%r12, %rdi
 	call	_ZNSolsEi@PLT
 	subl	$1, %ebp
-	jne	.L6
+	jne	.L12
 	leaq	_ZSt4cout(%rip), %rbp
 	.p2align 4,,10
 	.p2align 3
-.L7:
+.L13:
 	movl	%ebx, %esi
 	movq	%rbp, %rdi
 	call	_ZNSolsEi@PLT
 	sarl	%ebx
-	jne	.L7
+	jne	.L13
 	popq	%rbx
 	.cfi_def_cfa_offset 24
 	popq	%rbp
@@ -88,19 +117,19 @@ _Z21programmingConstructsi:
 	ret
 	.p2align 4,,10
 	.p2align 3
-.L11:
+.L18:
 	.cfi_restore 3
 	.cfi_restore 6
 	.cfi_restore 12
 	ret
 	.cfi_endproc
-.LFE1588:
-	.size	_Z21programmingConstructsi, .-_Z21programmingConstructsi
+.LFE1589:
+	.size	_Z5loopsi, .-_Z5loopsi
 	.section	.text.startup,"ax",@progbits
 	.p2align 4,,15
 	.type	_GLOBAL__sub_I__Z1fii, @function
 _GLOBAL__sub_I__Z1fii:
-.LFB2069:
+.LFB2070:
 	.cfi_startproc
 	subq	$8, %rsp
 	.cfi_def_cfa_offset 16
@@ -113,7 +142,7 @@ _GLOBAL__sub_I__Z1fii:
 	leaq	_ZStL8__ioinit(%rip), %rsi
 	jmp	__cxa_atexit@PLT
 	.cfi_endproc
-.LFE2069:
+.LFE2070:
 	.size	_GLOBAL__sub_I__Z1fii, .-_GLOBAL__sub_I__Z1fii
 	.section	.init_array,"aw"
 	.align 8
