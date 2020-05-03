@@ -15,6 +15,17 @@ void setBit(int x[], int n, int pos) {
 	// OR       1 <<  (pos % 32)  -->   1 << (pos AND 31)
 
 	// n mod 2^k    m & (k-1)
+	/*
+		101010101100
+		101010101101
+		101010101110
+		101010101111
+ 
+    1010101010101010111
+    0000000000000011111
+		0000000000000010111
+
+	 */
 
 }
 void setBit(int x[], int pos) {
@@ -30,7 +41,7 @@ void setBit(int x[], int pos) {
 	// x[pos >> 5] &= 1 << (pos & 31)
 
 void clearBit(int x[], int pos) {
-	x[pos >> 5] &=  ~(1 << (pos & 31)); // on the arm you should use BIC
+	x[pos >> 5] &=  ~(1 << (pos & 31)); // on the ARM you should use BIC
 }
 
 bool isTrue(int x[], int pos) {
