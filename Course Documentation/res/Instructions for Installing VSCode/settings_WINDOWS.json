@@ -1,0 +1,33 @@
+{
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.cppStandard": "gnu++14",
+  "C_Cpp.errorSquiggles": "Enabled",
+  "C_Cpp.inactiveRegionOpacity": 0.5,
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "ms-vscode.cpptools",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "C_Cpp.clang_format_style": "Google",
+  "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
+  "terminal.integrated.env.windows": {
+    "MSYSTEM": "MINGW64",
+    "CHERE_INVOKING": "1",
+    "workspaceFolder": "${workspaceFolder}",
+    "MSVSCODE": "1"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "remote.SSH.showLoginTerminal": true
+}

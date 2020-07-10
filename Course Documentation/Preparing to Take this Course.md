@@ -33,7 +33,7 @@ Additionally, there are [video instructions for installing some of the following
 
 ### For all courses, please install the following
 
-Microsoft VS Code is a great text editor that will allow you to work on my computer and be “called to the board” in class. Please install vscode [following these instructions](https://docs.google.com/document/d/1AtxCmtgfbJj7G2bEWahveqcwqkWNenUZIJZt6GZ7reA/edit) on your laptop and we will go over how to do this in the first class. I can promise a more fun, interactive class if you do this.
+Microsoft VS Code is a great text editor that will allow you to work on my computer and be “called to the board” in class. Please install vscode [following these instructions](Instructions%20for%20Installing%20VSCode.md) on your laptop and we will go over how to do this in the first class. I can promise a more fun, interactive class if you do this.
 
 Git ([Windows Download Link](https://git-scm.com/)) is a version control software. Using git, you can go back and get every version of what you have written. If you host it somewhere else (like github, see below) then if your computer breaks, is lost or stolen, you can retrieve all your work. Git is the most popular version control system today and something every programmer needs to know, which is why I use it in all my courses.
 

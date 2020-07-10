@@ -1,0 +1,15 @@
+{
+        "closeOnExit": true,
+        "commandline": "cmd.exe /c \"set MSYSTEM=MINGW64&& C:\\msys64\\usr\\bin\\bash.exe --login\"",
+        "fontFace": "Source Code Pro for Powerline",
+        "fontSize": 12,
+        "guid": "{09dc5eef-6840-4050-ae69-21e55e6a2e63}",
+        "historySize": 9001,
+        "icon": "C:\\\\msys64\\msys2.ico",
+        "name": "MSYS2",
+        "padding": "0, 0, 0, 0",
+        "snapOnInput": true,
+        "useAcrylic": true,
+        "acrylicOpacity": 0.8,
+        "background": "#000040"
+ }
