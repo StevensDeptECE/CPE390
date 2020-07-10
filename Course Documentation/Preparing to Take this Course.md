@@ -1,5 +1,22 @@
 # Preparing to Take this Course
 
+## Table of Contents
+
+- [Preparing to Take this Course](#preparing-to-take-this-course)
+  - [Table of Contents](#table-of-contents)
+  - [Instructions for All Courses](#instructions-for-all-courses)
+    - [For all courses, please install the following](#for-all-courses-please-install-the-following)
+  - [CPE-390 (Microprocessor Systems - Computer Architecture)](#cpe-390-microprocessor-systems---computer-architecture)
+  - [CPE-593 (Applied Data Structures and Algorithms)](#cpe-593-applied-data-structures-and-algorithms)
+  - [CPE-553 (C++)](#cpe-553-c)
+    - [IDE Installation](#ide-installation)
+      - [CLion](#clion)
+      - [Visual Studio](#visual-studio)
+    - [Non-IDE](#non-ide)
+      - [MSYS2 with g++/gdb](#msys2-with-ggdb)
+  - [EE-552 (Java)](#ee-552-java)
+  - [Bibliography](#bibliography)
+
 ## Instructions for All Courses
 
 If you are preparing to take one of the courses I teach, then I applaud you for getting here, hopefully before the semester starts. This document will outline the necessary tools you will need to be successful in these courses.
