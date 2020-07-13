@@ -27,7 +27,8 @@ Please have your VS Code set up before the first class as follows:
 3. Run the following:
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.bat)
    2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.sh)
-      1. Note for *nix, you will likely need to run `chmod +x install_extensions_locally.sh` before it will let you run the file
+      1. Note for *nix and MacOS, you will likely need to run `chmod +x install_extensions_locally.sh` before it will let you run the file
+      2. MacOS: Run `Shell Command: Install 'code' command in PATH` using `f1` in VS Code
 4. Open VS Code
 5. Hit `F1` and type `Preferences: Open Settings (JSON)`, hit enter.
 6. Replace the contents of the file with the following:
