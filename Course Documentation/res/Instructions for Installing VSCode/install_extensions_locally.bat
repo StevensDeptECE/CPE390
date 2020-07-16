@@ -10,4 +10,5 @@ code --install-extension ms-vscode-remote.vscode-remote-extensionpack &&^
 code --install-extension dan-c-underwood.arm &&^
 code --install-extension adashen.vscode-tomcat &&^
 code --install-extension yzhang.markdown-all-in-one &&^
+code --install-extension davidanson.vscode-markdownlint &&^
 echo "DONE INSTALLING EXTENSIONS"
