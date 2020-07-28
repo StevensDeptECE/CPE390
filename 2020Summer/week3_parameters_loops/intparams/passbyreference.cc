@@ -19,11 +19,13 @@ void h(int &x) {
 int main() {
   int a = 5;
   f(a);
+
+	int b = 7;
   
-  g(&a); //pass by pointer
-  g(&a); //pass by pointer
+  g(&b); //pass by pointer
+  g(&b); //pass by pointer
   
-  h(a); //pass by reference
-  h(a);
+  h(b); //pass by reference
+  h(b);
 
 }
