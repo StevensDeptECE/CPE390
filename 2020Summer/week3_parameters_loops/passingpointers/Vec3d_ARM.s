@@ -9,7 +9,7 @@
 	.eabi_attribute 30, 2
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
-	.file	"parameterpassing.cc"
+	.file	"Vec3d.cc"
 	.section	.text.startup,"ax",%progbits
 	.align	2
 	.global	main
@@ -19,87 +19,97 @@
 	.type	main, %function
 main:
 	.fnstart
-.LFB1479:
+.LFB1485:
 	@ args = 0, pretend = 0, frame = 8
 	@ frame_needed = 0, uses_anonymous_args = 0
-	push	{r4, r5, lr}
-	.save {r4, r5, lr}
-	.pad #20
-	sub	sp, sp, #20
-	bl	_Z2f0v
-	ldr	r5, .L3
-	mov	r4, #10
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
-	mov	r2, #1
-	strb	r4, [r1, #-1]!
+	push	{r4, r5, r6, lr}
+	.save {r4, r5, r6, lr}
+	vpush.64	{d8}
+	.vsave {d8}
+	vldr.64	d8, .L8
+	.pad #8
+	sub	sp, sp, #8
+	bl	clock
+	vldr.64	d7, .L8+8
+	ldr	r3, .L8+16
+	mov	r4, r0
+.L2:
+	subs	r3, r3, #1
+	vadd.f64	d8, d8, d7
+	bne	.L2
+	bl	clock
+	mov	r2, #9
+	ldr	r1, .L8+20
+	mov	r5, r0
+	ldr	r0, .L8+24
 	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r0, #2
-	bl	_Z2f1i
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
+	sub	r1, r5, r4
+	ldr	r0, .L8+24
+	bl	_ZNSo9_M_insertIlEERSoT_
+	add	r1, sp, #8
+	mov	r3, #10
+	strb	r3, [r1, #-3]!
 	mov	r2, #1
-	strb	r4, [r1, #-2]!
 	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r1, #3
-	mov	r0, #2
-	bl	_Z2f2ii
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
-	mov	r2, #1
-	strb	r4, [r1, #-3]!
-	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r2, #4
-	mov	r1, #3
-	mov	r0, #2
-	bl	_Z2f3iii
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
-	mov	r2, #1
-	strb	r4, [r1, #-4]!
-	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r3, #5
-	mov	r2, #4
-	mov	r1, #3
-	mov	r0, #2
-	bl	_Z2f4iiii
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
-	mov	r2, #1
-	strb	r4, [r1, #-5]!
-	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r3, #6
-	str	r3, [sp]
-	mov	r2, #4
-	mov	r3, #5
-	mov	r1, #3
-	mov	r0, #2
-	bl	_Z2f5iiiii
-	mov	r1, r0
-	mov	r0, r5
-	bl	_ZNSolsEi
-	add	r1, sp, #16
-	mov	r2, #1
-	strb	r4, [r1, #-6]!
-	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-	mov	r0, #0
-	add	sp, sp, #20
-	@ sp needed
-	pop	{r4, r5, pc}
-.L4:
-	.align	2
+	bl	clock
+	vldr.64	d7, .L8+8
+	ldr	r4, .L8+16
+	mov	r5, r0
 .L3:
+	subs	r4, r4, #1
+	vadd.f64	d8, d8, d7
+	bne	.L3
+	bl	clock
+	mov	r2, #9
+	ldr	r1, .L8+20
+	mov	r6, r0
+	ldr	r0, .L8+24
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	sub	r1, r6, r5
+	ldr	r0, .L8+24
+	bl	_ZNSo9_M_insertIlEERSoT_
+	add	r1, sp, #8
+	mov	r5, #10
+	strb	r5, [r1, #-2]!
+	mov	r2, #1
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	vldr.64	d0, .L8
+	ldr	r0, .L8+24
+	bl	_ZNSo9_M_insertIdEERSoT_
+	mov	r2, #1
+	ldr	r1, .L8+28
+	mov	r6, r0
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	vldr.64	d0, .L8
+	mov	r0, r6
+	bl	_ZNSo9_M_insertIdEERSoT_
+	mov	r2, #1
+	ldr	r1, .L8+28
+	mov	r6, r0
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	vmov.f64	d0, d8
+	mov	r0, r6
+	bl	_ZNSo9_M_insertIdEERSoT_
+	add	r1, sp, #8
+	mov	r2, #1
+	strb	r5, [r1, #-1]!
+	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
+	mov	r0, r4
+	add	sp, sp, #8
+	@ sp needed
+	vldm	sp!, {d8}
+	pop	{r4, r5, r6, pc}
+.L9:
+	.align	3
+.L8:
+	.word	0
+	.word	0
+	.word	0
+	.word	1072693248
+	.word	1000000000
+	.word	.LC0
 	.word	_ZSt4cout
+	.word	.LC1
 	.fnend
 	.size	main, .-main
 	.align	2
@@ -109,21 +119,21 @@ main:
 	.type	_GLOBAL__sub_I_main, %function
 _GLOBAL__sub_I_main:
 	.fnstart
-.LFB1917:
+.LFB1928:
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, lr}
-	ldr	r4, .L7
+	ldr	r4, .L12
 	mov	r0, r4
 	bl	_ZNSt8ios_base4InitC1Ev
 	mov	r0, r4
-	ldr	r2, .L7+4
-	ldr	r1, .L7+8
+	ldr	r2, .L12+4
+	ldr	r1, .L12+8
 	pop	{r4, lr}
 	b	__aeabi_atexit
-.L8:
+.L13:
 	.align	2
-.L7:
+.L12:
 	.word	.LANCHOR0
 	.word	__dso_handle
 	.word	_ZNSt8ios_base4InitD1Ev
@@ -140,6 +150,13 @@ _GLOBAL__sub_I_main:
 	.size	_ZStL8__ioinit, 1
 _ZStL8__ioinit:
 	.space	1
+	.section	.rodata.str1.4,"aMS",%progbits,1
+	.align	2
+.LC0:
+	.ascii	"Elapsed: \000"
+	.space	2
+.LC1:
+	.ascii	",\000"
 	.hidden	__dso_handle
 	.ident	"GCC: (Raspbian 6.3.0-18+rpi1+deb9u1) 6.3.0 20170516"
 	.section	.note.GNU-stack,"",%progbits

@@ -16,17 +16,18 @@ public:
 		return a;
 	}
 	friend ostream& operator<<(ostream& s, const Vec3d& v) {
-		return s << v.x << "," << v.y << "," << v.z;
+		return s << v.x << "," << v.y << "," << v.z << ": and the garbage..." << v.w<<v.v1<<v.v2<<v.v3<<v.v4<<v.v5;;
 	}
 };
 
 int main() {
-	Vec3d a(0,0,0,0,0,0,0,0,0);
-	Vec3d b(0,0,1,0,0,0,0,0,0);
+	Vec3d a(1,2,3,4,5,6,7,8,9);
+	Vec3d b(-1.6,.22,1,4.2,2,2.140,9.1,428.6,123.1);
 	const uint32_t n = 1000000000;
 	clock_t t0 = clock();
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) {
 		a = a + b;
+	}
 	clock_t t1 = clock();
 	cout << "Elapsed: " << (t1-t0) << '\n';
 

@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+int f0() {
+	return 5;
+}
+
 int f1(int a) {
 	return a;
 }
