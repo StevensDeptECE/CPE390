@@ -14,7 +14,7 @@ int main() {
   cout << removeBits(0x12345678, 0x0030) << '\n';
   cout << removeBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x12345078
   cout << removeBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x12341478
-  cout << setBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x163F1479
+  cout << setBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x163FD779
   int v = 0x1234;
   v = toggle(v, mask); // replace mask so v becomes 0x1034
   cout << v << '\n';
