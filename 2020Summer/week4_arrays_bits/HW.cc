@@ -50,7 +50,7 @@ int main() {
 
   cout << hex;
 
-  cout << removeBits(0x12345678, 0x0030) << '\n';
+  cout << removeBits(0x12345678, 0x0030) << '\n'; // result should be 0x12345648
   cout << removeBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x12345078
   cout << removeBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x12341478
   cout << setBits(0x12345678, mask) << '\n'; // replace mask by a value so result=0x163F1479
