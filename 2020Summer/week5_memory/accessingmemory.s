@@ -33,12 +33,13 @@ _Z14sumEntireArrayPKii:
 	jle	.L7
 	leal	-1(%rsi), %eax
 	leaq	4(%rdi,%rax,4), %rdx
-	xorl	%eax, %eax
+	xorl	%eax, %eax     ; XOR something with itself = 0
 	.p2align 4,,10
 	.p2align 3
 .L6:
-	addl	(%rdi), %eax
-	addq	$4, %rdi
+	addl	(%rdi), %eax   ; ldr   r1, [r0]
+                       ; add   r2, r1
+	addq	$4, %rdi       ; add   r0, #4
 	cmpq	%rdx, %rdi
 	jne	.L6
 	ret
