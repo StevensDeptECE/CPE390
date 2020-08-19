@@ -13,7 +13,7 @@ Please have your VS Code set up before the first class as follows:
       3. I believe that the git-bash will pull your ssh keys from the other shells. If not, you do not need to generate multiple ssh keys, just copy-paste the keys between msys2/wsl/cmd/etc in the home directory (`~/.ssh` or `C:\Users\StevensUser\.ssh`)
       4. In git bash, replacing Atilla's information with yours:
          1. `git config --global user.name "Atilla The Duck"`
-         2. `git config --global user.name "aduck@stevens.edu"`
+         2. `git config --global user.email "aduck@stevens.edu"`
    2. Linux: make sure you have `g++`, `gdb`, and `git` installed.
       1. First run update and upgrade using your package manager. IE if you were on a distro that used apt: `sudo apt update -y && sudo apt full-upgrade -y`
          1. This may take around 5-10 minutes, depending on how recently your distro was compiled into an image and how many packages were included. (To keep the image light, I recommend grabbing the lightest package that includes a GUI, if multiple are offered)
