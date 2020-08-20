@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
+}

@@ -10,8 +10,9 @@ Please have your VS Code set up before the first class as follows:
       2. Edit your windows path to include the following in exactly this order AT THE BOTTOM:
          1. `C:\msys64\mingw64\bin`
          2. `C:\msys64\usr\bin`
-      3. I believe that the git-bash will pull your ssh keys from the other shells. If not, you do not need to generate multiple ssh keys, just copy-paste the keys between msys2/wsl/cmd/etc in the home directory (`~/.ssh` or `C:\Users\StevensUser\.ssh`)
-      4. In git bash, replacing Atilla's information with yours:
+      3. Edit `C:\msys64\msys2_shell.cmd`, uncommenting `rem set MSYS2_PATH_TYPE=inherit` by removing `rem` from the front of the line.
+      4. I believe that the git-bash will pull your ssh keys from the other shells. If not, you do not need to generate multiple ssh keys, just copy-paste the keys between msys2/wsl/cmd/etc in the home directory (`~/.ssh` or `C:\Users\StevensUser\.ssh`)
+      5. In git bash, replacing Atilla's information with yours:
          1. `git config --global user.name "Atilla The Duck"`
          2. `git config --global user.email "aduck@stevens.edu"`
    2. Linux: make sure you have `g++`, `gdb`, and `git` installed.
@@ -35,8 +36,8 @@ Please have your VS Code set up before the first class as follows:
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/settings_WINDOWS.json)
       1. If you didn't install MSYS2 in the default location with the default settings, you will need to modify this file to match your installation location/etc.
    2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/../Instructions%20for%20Installing%20VSCode/settings__NIX.json)
-7. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](https://docs.google.com/document/d/1fs4s9avLyO5wCumvdG_iKx3JQufEAK4cVJOkqFO9JjQ/edit#)
-8. Setup connection between VSCode on your machine and the Pi
+7. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](https://docs.google.com/document/d/1fs4s9avLyO5wCumvdG_iKx3JQufEAK4cVJOkqFO9JjQ/edit#). Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
+8. Setup connection between VSCode on your machine and the Pi. Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
    1. `F1`, type `Remote-SSH: Add New SSH Host`
    2. `ssh pi@raspberrypi -p 22`
       1. Change based on your port, host/hostname, username
@@ -47,9 +48,10 @@ Please have your VS Code set up before the first class as follows:
 
       ![1.png](res/Instructions%20for%20Installing%20VSCode/1.png)
 
-9. My tasks and launch files: These need to go into a .vscode folder (that you create) at the root of any project you work on… They allow you to run from within VSCode. You will need to edit these files if not using Windows with the default MSYS2 installation path.
-   1. [tasks.json](res/Instructions%20for%20Installing%20VSCode/tasks.json)
-   2. [launch.json](res/Instructions%20for%20Installing%20VSCode/launch.json)
+9. My .vscode folder: This needs to be renamed to `.vscode` (not `.vscode_OS`). They allow you to run/debug from within VSCode. You will need to edit these files if not using Windows with the default MSYS2 installation path, or if your executables are not being generated in the root directory as `a.exe` or `a.out` (depending on your OS).
+   1. [Linux](res/Instructions%20for%20Installing%20VSCode/.vscode_LINUX/)
+   2. [MacOS](res/Instructions%20for%20Installing%20VSCode/.vscode_MACOS/) (credit to [jpaul21](https://github.com/jpaul21))
+   3. [Windows](res/Instructions%20for%20Installing%20VSCode/.vscode_WINDOWS/)
 10. If you are on Windows, you will need the following to be able to use MSYS from VSCode… [Essentially where I got this](https://stackoverflow.com/questions/45836650/how-do-i-integrate-msys2-shell-into-visual-studio-code-on-window) (don’t need to follow link)
     1. Edit ~/.bashrc in msys2 and add [this](res/Instructions%20for%20Installing%20VSCode/bashrc_FRAGMENT.sh) to the end.
     2. This is pretty hacky. If things break, just open msys2 (MinGW64) and use it the normal way, but please send us an email with a zip file of a workspace with a minimum reproducible example and any/all error messages.
