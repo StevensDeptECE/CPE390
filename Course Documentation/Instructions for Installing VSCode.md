@@ -1,5 +1,12 @@
-# Instructions for Installing VS Code
 
+# 1. Instructions for Installing VS Code
+
+## 1.1. Table of Contents
+- [1. Instructions for Installing VS Code](#1-instructions-for-installing-vs-code)
+  - [1.1. Table of Contents](#11-table-of-contents)
+  - [1.2. Installing VS Code](#12-installing-vs-code)
+
+## 1.2. Installing VS Code
 We are going to be using VS Code in class for a new, never before possible interactive class.
 Please have your VS Code set up before the first class as follows:
 
@@ -23,6 +30,9 @@ Please have your VS Code set up before the first class as follows:
          2. `gdb`
          3. `make`
          4. `git`
+      3. Set up git (locally) with your github info, replacing Atilla's information with yours:
+         1. `git config --global user.name "Atilla The Duck"`
+         2. `git config --global user.email "aduck@stevens.edu"`
    3. Mac: Same as linux but use [homebrew](https://brew.sh/)
 2. [Install VS Code on your system](https://code.visualstudio.com/download). Leave vscode closed.
 3. Run the following:
@@ -36,7 +46,7 @@ Please have your VS Code set up before the first class as follows:
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/settings_WINDOWS.json)
       1. If you didn't install MSYS2 in the default location with the default settings, you will need to modify this file to match your installation location/etc.
    2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/../Instructions%20for%20Installing%20VSCode/settings__NIX.json)
-7. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](https://docs.google.com/document/d/1fs4s9avLyO5wCumvdG_iKx3JQufEAK4cVJOkqFO9JjQ/edit#). Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
+7. If you are not taking CPE-390, skip steps 7-8. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](Setting%20Up%20Raspberry%20Pi%20For%20CPE-390.md). Note that if your Pi is not ready to be setup, you may skip steps 7 & 8 and proceed to further steps.
 8. Setup connection between VSCode on your machine and the Pi. Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
    1. `F1`, type `Remote-SSH: Add New SSH Host`
    2. `ssh pi@raspberrypi -p 22`

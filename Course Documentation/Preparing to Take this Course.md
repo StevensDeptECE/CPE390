@@ -1,23 +1,23 @@
-# Preparing to Take this Course
+# 1. Preparing to Take this Course
 
-## Table of Contents
+## 1.1. Table of Contents
 
-- [Preparing to Take this Course](#preparing-to-take-this-course)
-  - [Table of Contents](#table-of-contents)
-  - [Instructions for All Courses](#instructions-for-all-courses)
-    - [For all courses, please install the following](#for-all-courses-please-install-the-following)
-  - [CPE-390 (Microprocessor Systems - Computer Architecture)](#cpe-390-microprocessor-systems---computer-architecture)
-  - [CPE-593 (Applied Data Structures and Algorithms)](#cpe-593-applied-data-structures-and-algorithms)
-  - [CPE-553 (C++)](#cpe-553-c)
-    - [IDE Installation](#ide-installation)
-      - [CLion](#clion)
-      - [Visual Studio](#visual-studio)
-    - [Non-IDE](#non-ide)
-      - [MSYS2 with g++/gdb](#msys2-with-ggdb)
-  - [EE-552 (Java)](#ee-552-java)
-  - [Bibliography](#bibliography)
+- [1. Preparing to Take this Course](#1-preparing-to-take-this-course)
+  - [1.1. Table of Contents](#11-table-of-contents)
+  - [1.2. Instructions for All Courses](#12-instructions-for-all-courses)
+    - [1.2.1. For all courses, please install the following](#121-for-all-courses-please-install-the-following)
+  - [1.3. CPE-390 (Microprocessor Systems - Computer Architecture)](#13-cpe-390-microprocessor-systems---computer-architecture)
+  - [1.4. CPE-593 (Applied Data Structures and Algorithms)](#14-cpe-593-applied-data-structures-and-algorithms)
+  - [1.5. CPE-553 (C++)](#15-cpe-553-c)
+    - [1.5.1. IDE Installation](#151-ide-installation)
+      - [1.5.1.1. CLion](#1511-clion)
+      - [1.5.1.2. Visual Studio](#1512-visual-studio)
+    - [1.5.2. Non-IDE](#152-non-ide)
+      - [1.5.2.1. MSYS2 with g++/gdb](#1521-msys2-with-ggdb)
+  - [1.6. EE-552 (Java)](#16-ee-552-java)
+  - [1.7. Bibliography](#17-bibliography)
 
-## Instructions for All Courses
+## 1.2. Instructions for All Courses
 
 If you are preparing to take one of the courses I teach, then I applaud you for getting here, hopefully before the semester starts. This document will outline the necessary tools you will need to be successful in these courses.
 
@@ -31,7 +31,7 @@ If for any reason you are unable to install any of the required programs, do not
 
 Additionally, there are [video instructions for installing some of the following tools](https://docs.google.com/document/d/1Y4A8po7VMNgqa6_oDe02X1yfd66QDiv6LBtUD7U29E0/edit). Not every tool is here, and these videos may be slightly outdated. We are working on it.
 
-### For all courses, please install the following
+### 1.2.1. For all courses, please install the following
 
 Microsoft VS Code is a great text editor that will allow you to work on my computer and be “called to the board” in class. Please install vscode [following these instructions](Instructions%20for%20Installing%20VSCode.md) on your laptop and we will go over how to do this in the first class. I can promise a more fun, interactive class if you do this.
 
@@ -41,10 +41,10 @@ Git ([Windows Download Link](https://git-scm.com/)) is a version control softwar
 
 You will also need a Github account. Github is a website that offers online hosting of git repositories. All my class examples are hosted on git, and in some cases you will be asked to submit larger homeworks using git. In any case as a programmer, this is something everyone should know. [Link to get an educational GitHub account (free features)](https://education.github.com/)
 
-## CPE-390 (Microprocessor Systems - Computer Architecture)
+## 1.3. CPE-390 (Microprocessor Systems - Computer Architecture)
 
 **_You will need a Raspberry Pi, power supply, and microSD card for this course._
-Please be aware if you buy a microSD card you need to install Raspbian on it. So you should have access to a card reader/writer and a full sized SD card adapter that takes the micro-SD card. Or you can just buy Raspbian on a card.**
+Please be aware if you buy a microSD card you need to install Raspbian on it. So you should have access to a card reader/writer and an adapter that will allow you to read and write data to the card from your computer. Or you can just buy Raspbian on a card (not recommended).**
 
 We will start with a quick review of C++ and then dive in and see how it generates assembly code. Below is a list of required materials for this class:
 | Software                                      | Available From                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -67,7 +67,7 @@ You may bring in your Raspberry Pi to B123 and use it in our lab. We have keyboa
 
 Having an IDE is not that important, because Raspberry Pi does not have great support for IDEs. Therefore, **it is highly recommended** to learn to use a text editor such as VI, Emacs, or nano. I am willing to conduct extra sessions to get people up to speed in these. Of course, you are welcome to use your own preferred editor, but please do not expect any support.  Instructions on how to install these will be provided in class.
 
-## CPE-593 (Applied Data Structures and Algorithms)
+## 1.4. CPE-593 (Applied Data Structures and Algorithms)
 
 **Install either g++ or Java** as described for the corresponding classes below. Your homework must compile either on g++ or Java, and the tools listed below will do that.  
 
@@ -75,7 +75,7 @@ You will need git, described above, in order to get the examples that I build in
 
 There is no other required materials for this class.
 
-## CPE-553 (C++)
+## 1.5. CPE-553 (C++)
 
 The following tools are required for this class:
 
@@ -90,17 +90,17 @@ It would be worth your while to install Emacs, VI, Sublime Text 3, Atom, and Not
 
 You will see me use some of these tools in class. **If you want to get a job programming, it is distinctly to your advantage to get as many tools as possible on your resume.**
 
-### IDE Installation
+### 1.5.1. IDE Installation
 
-#### [CLion](https://www.jetbrains.com/clion/download/)
+#### 1.5.1.1. [CLion](https://www.jetbrains.com/clion/download/)
 
 It is the best portable environment I know.  You will have to get a license, but it is free for students.
 
-#### [Visual Studio](https://visualstudio.microsoft.com/)
+#### 1.5.1.2. [Visual Studio](https://visualstudio.microsoft.com/)
 
 You may use Visual Studio, but if you do not compile with g++ or clang, your code might be non-standard. If you do not submit code that compiles under g++, you will get a 25% for that assignment.
 
-### Non-IDE
+### 1.5.2. Non-IDE
 
 If you are on Windows 10, the easiest thing is to [install Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), a full Ubuntu under windows. It doesn’t do graphics, but for any text programs it’s great and a full linux environment, a great learning opportunity.
 
@@ -108,7 +108,7 @@ For building graphical linux programs under windows, using C++ you can use [**MS
 
 There are a number of choices including **MinGW** (Minimal Gnu For Windows), **Cygwin** (a Unix-like environment running under windows).
 
-#### MSYS2 with g++/gdb
+#### 1.5.2.1. MSYS2 with g++/gdb
 
 Once you have MSYS2, you will have to install all the tools for it. Assuming you have a 64 bit windows:
 
@@ -143,7 +143,7 @@ You may use Visual Studio or Xcode, but if you do you must make sure your code w
 
 Please take the pretest as soon as the course opens.  This is just to collect data on how much you knew going into the course.  There are no prerequisites, you do not have to know how to program to take it (but it is obviously easier if you do).
 
-## EE-552 (Java)
+## 1.6. EE-552 (Java)
 
 Please install:
 
@@ -155,7 +155,7 @@ Please install:
 
 Later in the course it is possible we might do some web programming using JSP/servlets in which case you can install Jakarta Tomcat, or do some database in which case we could install MySQL or MariaDB, but that will not be needed until much later if at all.
 
-## Bibliography
+## 1.7. Bibliography
 
 [For C++, there is a free textbook, but if you want to buy one I recommend Lippman, 5e](http://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113/ref=sr_1_2?ie=UTF8&qid=1451008292&sr=8-2&keywords=lippman%2C+5e)
 
