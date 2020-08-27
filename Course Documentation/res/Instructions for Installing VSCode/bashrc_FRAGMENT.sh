@@ -1,5 +1,6 @@
 if [ ! -z "$MSVSCODE" ]; then
-            unset MSVSCODE
-            source /etc/profile
-            cd “$workspaceFolder”
+  unset MSVSCODE
+  source ~/.bashrc
+  source ~/.profile
+  cd “$workspaceFolder”
 fi
