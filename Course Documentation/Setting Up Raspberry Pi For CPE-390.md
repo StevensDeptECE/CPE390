@@ -84,7 +84,7 @@
    2. Side-note: After you setup your github key, I highly recommend using `ssh-copy-id` to setup a login ssh key between your computer and your pi and then disabling ssh login using a password as key-based login is infinitely more secure, faster, and convenient. If you ever lose your SSH key (from reinstalling OS/etc), you can easily plug your Pi into a monitor and re-enable password login or just reflash the SD Card to fix the ssh-key problem.
 
 2. Update the software on the Pi, run: `sudo apt update -y && sudo apt full-upgrade -y` . It will ask for your password.
-3. Install a few basic required packages: `sudo apt install g++ gdb openssh git -y`
+3. Install a few basic required packages: `sudo apt install g++ gdb openssh-server git -y`
 
 ## 1.8. Setup SSH Keys on your Pi for GitHub
 
