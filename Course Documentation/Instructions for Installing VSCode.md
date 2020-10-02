@@ -1,12 +1,13 @@
-
 # 1. Instructions for Installing VS Code
 
 ## 1.1. Table of Contents
+
 - [1. Instructions for Installing VS Code](#1-instructions-for-installing-vs-code)
   - [1.1. Table of Contents](#11-table-of-contents)
   - [1.2. Installing VS Code](#12-installing-vs-code)
 
 ## 1.2. Installing VS Code
+
 We are going to be using VS Code in class for a new, never before possible interactive class.
 Please have your VS Code set up before the first class as follows:
 
@@ -19,6 +20,7 @@ Please have your VS Code set up before the first class as follows:
          2. `C:\msys64\usr\bin`
       3. Edit `C:\msys64\msys2_shell.cmd`, uncommenting `rem set MSYS2_PATH_TYPE=inherit` by removing `rem` from the front of the line.
       4. I believe that the git-bash will pull your ssh keys from the other shells. If not, you do not need to generate multiple ssh keys, just copy-paste the keys between msys2/wsl/cmd/etc in the home directory (`~/.ssh` or `C:\Users\StevensUser\.ssh`)
+         1. Make sure you copy-paste both the public and private keys (`.pub` version and the version with no extension).
       5. In git bash, replacing Atilla's information with yours:
          1. `git config --global user.name "Atilla The Duck"`
          2. `git config --global user.email "aduck@stevens.edu"`
@@ -35,37 +37,44 @@ Please have your VS Code set up before the first class as follows:
          2. `git config --global user.email "aduck@stevens.edu"`
    3. Mac: Same as linux but use [homebrew](https://brew.sh/)
 2. [Install VS Code on your system](https://code.visualstudio.com/download). Leave vscode closed.
-3. Run the following:
+3. Download the following files and run them. For those that are unclear, after clicking on the appropriate link, click the `RAW` button on the following page, then right click --> save as --> ensure the file has the correct name and extension (`.sh` or `.bat`, not `.txt` or `.bat.txt`) --> save. Then double click on it after download to run it.
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.bat)
-   2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.sh)
-      1. Note for *nix and MacOS, you will likely need to run `chmod +x install_extensions_locally.sh` before it will let you run the file
-      2. MacOS: Run `Shell Command: Install 'code' command in PATH` using `f1` in VS Code
+   2. [\*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.sh)
+      1. Note for \*nix and MacOS, you will likely need to run `chmod +x install_extensions_locally.sh` before it will let you run the file. Might need `sudo` for that.
+      2. MacOS: Run `Shell Command: Install 'code' command in PATH` using `f1` in VS Code before running this script.
 4. Open VS Code
 5. Hit `F1` and type `Preferences: Open Settings (JSON)`, hit enter.
 6. Replace the contents of the file with the following:
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/settings_WINDOWS.json)
       1. If you didn't install MSYS2 in the default location with the default settings, you will need to modify this file to match your installation location/etc.
-   2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/../Instructions%20for%20Installing%20VSCode/settings__NIX.json)
-7. If you are not taking CPE-390, skip steps 7-8. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](Setting%20Up%20Raspberry%20Pi%20For%20CPE-390.md). Note that if your Pi is not ready to be setup, you may skip steps 7 & 8 and proceed to further steps.
-8. Setup connection between VSCode on your machine and the Pi. Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
-   1. `F1`, type `Remote-SSH: Add New SSH Host`
-   2. `ssh pi@raspberrypi -p 22`
-      1. Change based on your port, host/hostname, username
-      2. Note that this changes based on OS, and whatever SSH system you use. (Note especially the `-p 22`. Most linux/MacOS/non-default-windows ssh executables will use the format `user@host:port` instead of `user@host -p port`.
-   3. Remote-SSH: Connect Current Window to Host
-   4. Select the newly added host. Note that you can change the order in which they appear by reordering the SSH Config file.
-   5. Unfortunately, extensions are installed to the host of the vscode server, meaning that you’ll need to install a good number of the extensions again, but this time, on the server. Open the bat/sh file from before and copy paste the IDs one by one into the extension search bar and install on server. Some may not need to be installed on the server as they work from your machine.
+   2. [\*nix](res/Instructions%20for%20Installing%20VSCode/../Instructions%20for%20Installing%20VSCode/settings__NIX.json)
+   3. [MacOS](res/Instructions%20for%20Installing%20VSCode/../Instructions%20for%20Installing%20VSCode/settings_macos.json)
+7. Hit `F1` and type `Tasks: Open User Tasks`, hit enter.
+8. Replace the contents of the file with the following:
+   1. [Windows](res/Instructions%20for%20Installing%20VSCode/tasks_hardcoded/tasks_WINDOWS.json)
+   2. [\*nix](res/Instructions%20for%20Installing%20VSCode/tasks_hardcoded/tasks_nix.json)
+   3. [MacOS](res/Instructions%20for%20Installing%20VSCode/tasks_hardcoded/tasks_macos.json)
+9. If you are not taking CPE-390, skip steps 10-11.
+10. [Setup your Pi (get Raspbian installed and make sure you can ssh into it from the terminal)](Setting%20Up%20Raspberry%20Pi%20For%20CPE-390.md). Note that if your Pi is not ready to be setup, you may skip steps 10 & 11 and proceed to further steps.
+11. Setup connection between VSCode on your machine and the Pi. Note that if your Pi is not ready to be setup, you may skip this step and proceed to further steps.
 
-      ![1.png](res/Instructions%20for%20Installing%20VSCode/1.png)
+    1. `F1`, type `Remote-SSH: Add New SSH Host`
+    2. `ssh pi@raspberrypi -p 22`
+    3. Change based on your port, host/hostname, username
+       1. Note that this changes based on OS, and whatever SSH system you use. (Note especially the `-p 22`. Most linux/MacOS/non-default-windows ssh executables will use the format `user@host:port` instead of `user@host -p port`.
+    4. Remote-SSH: Connect Current Window to Host
+    5. Select the newly added host. Note that you can change the order in which they appear by reordering the SSH Config file.
+    6. Unfortunately, extensions are installed to the host of the vscode server, meaning that you’ll need to install a good number of the extensions again, but this time, on the server. Open the bat/sh file from before and copy paste the IDs one by one into the extension search bar and install on server. Some may not need to be installed on the server as they work from your machine.
 
-9. My .vscode folder: This needs to be renamed to `.vscode` (not `.vscode_OS`). They allow you to run/debug from within VSCode. You will need to edit these files if not using Windows with the default MSYS2 installation path, or if your executables are not being generated in the root directory as `a.exe` or `a.out` (depending on your OS).
-   1. [Linux](res/Instructions%20for%20Installing%20VSCode/.vscode_LINUX/)
-   2. [MacOS](res/Instructions%20for%20Installing%20VSCode/.vscode_MACOS/) (credit to [jpaul21](https://github.com/jpaul21))
-   3. [Windows](res/Instructions%20for%20Installing%20VSCode/.vscode_WINDOWS/)
-10. If you are on Windows, you will need the following to be able to use MSYS from VSCode… [Essentially where I got this](https://stackoverflow.com/questions/45836650/how-do-i-integrate-msys2-shell-into-visual-studio-code-on-window) (don’t need to follow link)
-    1. Edit ~/.bashrc in msys2 and add [this](res/Instructions%20for%20Installing%20VSCode/bashrc_FRAGMENT.sh) to the end.
-    2. This is pretty hacky. If things break, just open msys2 (MinGW64) and use it the normal way, but please send us an email with a zip file of a workspace with a minimum reproducible example and any/all error messages.
-11. Some important shortcuts:
+    ![1.png](res/Instructions%20for%20Installing%20VSCode/1.png)
+
+12. If you are working on large projects or on Grail, you need the following configuration... Go back to step 6 and replace the launch files with the below folder corresponding to your OS. Also repeat step 8 with the correct task file. Essentially what they do is run `make -B` in the root directory, which will trigger a Makefile you create and configure. From there, it will run `a.exe` or `a.out` (depending on your OS) in the debugger. It might be set to stop on entry (i.e. act as if the first line of main has a breakpoint). To avoid debugging, just hit the continue button and it will finish running. The output of your program is not in the debugger, but rather in the terminal tab of the lower-window. You will need to edit these files if not using Windows with the default MSYS2 installation path, or if your executables are not being generated in the root directory as `a.exe` or `a.out` (depending on your OS) (OR IF YOU ARE WORKING ON GRAIL).
+
+    1. [Linux](res/Instructions%20for%20Installing%20VSCode/.vscode_LINUX/)
+    2. [MacOS](res/Instructions%20for%20Installing%20VSCode/.vscode_MACOS/) (credit to [jpaul21](https://github.com/jpaul21)) -- note: not the makefile version... needs to be updated.
+    3. [Windows](res/Instructions%20for%20Installing%20VSCode/.vscode_WINDOWS/)
+
+13. Some important shortcuts:
     1. `CTRL/CMD + p`: used for searching FOR files (not within). This is mostly useful when you are working in a large project with many files/large folder structure.
     2. `CTRL/CMD + SHIFT + P` or `F1`: Used to run commands - ie starting remote sessions.
     3. If you are in CMD/WSL you can use `code` to launch VS Code.

@@ -1,0 +1,51 @@
+{
+  "editor.formatOnSave": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.cppStandard": "gnu++14",
+  "C_Cpp.errorSquiggles": "Enabled",
+  "C_Cpp.inactiveRegionOpacity": 0.5,
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "ms-vscode.cpptools",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "C_Cpp.clang_format_style": "Google",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "remote.SSH.showLoginTerminal": true,
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "clang++ - Build and debug active file",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/a.out",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "clang++ build active file"
+      }
+    ]
+  }
+}
