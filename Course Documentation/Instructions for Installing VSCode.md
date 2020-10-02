@@ -35,7 +35,7 @@ Please have your VS Code set up before the first class as follows:
          2. `git config --global user.email "aduck@stevens.edu"`
    3. Mac: Same as linux but use [homebrew](https://brew.sh/)
 2. [Install VS Code on your system](https://code.visualstudio.com/download). Leave vscode closed.
-3. Run the following:
+3. Download the following files as .bat and run them. For those that are unclear, on the page click the RAW button, then right click --> save as --> remove ".txt" at the end of the file name --> save. Then double click on it after download.
    1. [Windows](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.bat)
    2. [*nix/MacOS](res/Instructions%20for%20Installing%20VSCode/install_extensions_locally.sh)
       1. Note for *nix and MacOS, you will likely need to run `chmod +x install_extensions_locally.sh` before it will let you run the file
@@ -65,7 +65,9 @@ Please have your VS Code set up before the first class as follows:
 10. If you are on Windows, you will need the following to be able to use MSYS from VSCode… [Essentially where I got this](https://stackoverflow.com/questions/45836650/how-do-i-integrate-msys2-shell-into-visual-studio-code-on-window) (don’t need to follow link)
     1. Edit ~/.bashrc in msys2 and add [this](res/Instructions%20for%20Installing%20VSCode/bashrc_FRAGMENT.sh) to the end.
     2. This is pretty hacky. If things break, just open msys2 (MinGW64) and use it the normal way, but please send us an email with a zip file of a workspace with a minimum reproducible example and any/all error messages.
-11. Some important shortcuts:
+11. To set up g++ as your compiler and debugger, follow the instructions in this link: https://code.visualstudio.com/docs/cpp/config-mingw
+Since you already installed VSCode, you can ignore the pre-requisites. ONE MAIN CHANGE: when creating the tasks.json file, the "command:" line should be your path to g++. In our case, that line should be "command": "C:/msys64/mingw64/bin/g++.exe",
+12. Some important shortcuts:
     1. `CTRL/CMD + p`: used for searching FOR files (not within). This is mostly useful when you are working in a large project with many files/large folder structure.
     2. `CTRL/CMD + SHIFT + P` or `F1`: Used to run commands - ie starting remote sessions.
     3. If you are in CMD/WSL you can use `code` to launch VS Code.
