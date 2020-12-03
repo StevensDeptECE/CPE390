@@ -2,9 +2,16 @@
 #include<cmath>
 
 using namespace std;
+/*
+Author: Dov Kruger and students from class. Put your own names down!
+
+pledge: This isn't my homework so I pledge nothing.
+
+*/
 
 void print(int a[], int len)
 {
+  cout << a << '\n'; //this prints the location of the first elements of the array
   for (int i = 0; i < len; i++)
     cout << a[i] << ' ';
   cout << '\n';
