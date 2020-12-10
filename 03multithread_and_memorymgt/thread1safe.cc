@@ -1,15 +1,20 @@
 #include <iostream>
 #include <thread>
+#include <mutex>
 
 using namespace std;
 
 
-const int n = 1000000000;
+const int n = 10000000;
 int balance = 0; // balance is in RAM
+mutex m;
 
 void deposit() {
-  for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++) {
+		m.lock();
 		balance++;
+		m.unlock();
+	}
 	/*
 		ldr r1, [r0]
 		add r1, #1
@@ -20,8 +25,11 @@ void deposit() {
 
 void withdraw() {
 	for (int i = 0; i < n; i++)
-		if (balance >= 1)
+		if (balance >= 1) {
+			m.lock();
 			balance--;
+			m.unlock();
+		}
 }
 /*
    ldr r0, [ ]  3
