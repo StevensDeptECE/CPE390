@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
 	const int n = 1000000;
-	int fh = creat("test.dat", O_WRONLY);
+	int fh = creat("test.dat", 0600);
 	if (fh < 0) {
 		cout << "could not create file\n";
 		exit(-1);
