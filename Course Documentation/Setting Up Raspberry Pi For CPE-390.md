@@ -24,7 +24,7 @@
 
 ## 1.3. Installing the OS on the SD Card
 
-1. Plug your microSD Card into your computer
+1. Plug your MicroSD Card into your computer. If you are using a MicroSD card with an adapter (to SD), there is likely a grey tab on the left side of the adapter that controls writing to the card. It might have a lock icon next to it. Please push that tab to the unlock position (usually upward). If it is inserted with the tab in the locked position, it will allow you to read files but not write to the card (I think to prevent photographers from accidentally deleting photos). 
 2. Open Balena Etcher
 3. Click `Flash from file`
 4. Select the decompressed file
