@@ -15,7 +15,7 @@ Please have your VS Code set up before the first class as follows:
    1. Windows: install [MSYS2](https://www.msys2.org/), [Git](https://git-scm.com/downloads), in that particular order
       1. Run the following in `MSYS2 MinGW 64-bit`
          1. `pacman -S git nano make cmake mingw64/mingw-w64-x86_64-gcc mingw-w64-x86_64-gdb mingw-w64-x86_64-gcc mingw-w64-x86_64-toolchain mingw-w64-x86_64-zlib mingw-w64-x86_64-freetype mingw-w64-x86_64-glfw bison flex cgdb`
-      2. Edit your windows path to include the following in exactly this order AT THE BOTTOM:
+      2. Open the start menu, search for "environment variables". Edit the `PATH` environment variable to include the following in exactly this order AT THE BOTTOM:
          1. `C:\msys64\mingw64\bin`
          2. `C:\msys64\usr\bin`
       3. Edit `C:\msys64\msys2_shell.cmd`, uncommenting `rem set MSYS2_PATH_TYPE=inherit` by removing `rem` from the front of the line.
