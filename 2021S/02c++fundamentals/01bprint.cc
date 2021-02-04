@@ -2,5 +2,7 @@
 using namespace std;
 
 int main() {
-	cout << "testing\n";
+  cout << "Cameron Kline\n";
+
+  return 0;
 }
