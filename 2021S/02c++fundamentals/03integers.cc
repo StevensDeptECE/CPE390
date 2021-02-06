@@ -26,7 +26,7 @@ using namespace std;
 
   'A' = 65 = 001000001
 
-  2 to 10 = 1024
+  2 to 10 = 1024 = 1k
   2 to 20 = 1024*1024 = 1M
   2 to 30 = 1024*1024*1024 = 1G
   32 bits have 4G different values
