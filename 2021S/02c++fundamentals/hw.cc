@@ -16,11 +16,17 @@ uint64_t fact(int num) {
 }
 
 int main() {
-	cout << sum(3, 6); // compute the sum 3 + 4 + 5 + 6
-	cout << sum(5, 100); // compute the sum 5+6+7+...+100
+	cout << sum(3, 6) << '\n'; // compute the sum 3 + 4 + 5 + 6
+	cout << sum(5, 100) << '\n'; // compute the sum 5+6+7+...+100
   cout << fact(5) << '\n'; //120
-  cout << fact(15) << '\n'; //1.308e12
-  cout << fact(25) << '\n'; //1.551e25
+   cout << fact(15) << '\n'; //1.308e12
+  cout << fact( ) << '\n'; //1.551e25
+  //cout << fact(50) << '\n';
+  cout << sumOfSquares(10) << '\n'; // print 1*1 + 2*2 + 3*3 + ... + 10*10
+  cout << sumOfSquares(11) << '\n'; // print 1*1 + 2*2 + 3*3 + ... + 10*10+11*11
+}
+ cout << fact(15) << '\n'; //1.308e12
+  cout << fact( ) << '\n'; //1.551e25
   //cout << fact(50) << '\n';
   cout << sumOfSquares(10) << '\n'; // print 1*1 + 2*2 + 3*3 + ... + 10*10
   cout << sumOfSquares(11) << '\n'; // print 1*1 + 2*2 + 3*3 + ... + 10*10+11*11
