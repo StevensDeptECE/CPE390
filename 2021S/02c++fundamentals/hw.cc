@@ -37,6 +37,6 @@ int main() {
 	for (int i = 1; i <= 25; i++)
 		cout << i << ": " << fact(i) << '\n';
   //cout << fact(50) << '\n';
-  cout << sumOfSquares(10) << '\n'; // compute 1*1 + 2*2 + 3*3 + ... + 10*10
+  cout << sumOfSquares(3) << '\n'; // compute 1*1 + 2*2 + 3*3 = 14
   cout << sumOfSquares(11) << '\n'; // compute 1*1 + 2*2 + 3*3 + ... + 10*10+11*11
 }
