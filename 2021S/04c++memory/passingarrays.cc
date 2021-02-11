@@ -16,7 +16,8 @@ void print(int a[], int length) {
 
  int main() {
    constexpr int SIZE = 10;
-   int a[SIZE] = {9, 1, 2};
+   int a[SIZE] = {9, 1, 2}; // 9 1 2 0 0 0 0 0 0 0 
+   //a-1                    ?? 9 1 2 0 0 0 0 0 0 0 ??
    print(a, SIZE);
    print(a + 1, 3);
 
