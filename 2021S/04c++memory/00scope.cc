@@ -12,7 +12,7 @@ void f() {
   cout << x;
 
   int x; // this variable is auto. Its scope is the function in which it is written
-  cout << x; // we are printing the LOCAL variable x
+  cting the LOCAL variable x
 
   cout << ::x; // this is explicitly referring to the global variable x
   cout << stevens::x;
