@@ -1,6 +1,6 @@
 	.global	main
 main:
-	mov	r0, #0    @mov 0 into register r0
+	mov	r0, #0    @mov 0 into register r0 immediate mode
 	mov	r10, #23  @mov 23 into register r10
 
 	@loading and storing to/from memory is MUCH SLOWER than registers
