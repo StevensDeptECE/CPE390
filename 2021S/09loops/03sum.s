@@ -9,7 +9,7 @@
 	.eabi_attribute 30, 6
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
-	.file	"02sum.cc"
+	.file	"03sum.cc"
 	.text
 	.section	.rodata
 	.align	2
@@ -19,6 +19,13 @@ _ZStL19piecewise_construct:
 	.space	1
 	.local	_ZStL8__ioinit
 	.comm	_ZStL8__ioinit,1,4
+	.global	x
+	.bss
+	.align	2
+	.type	x, %object
+	.size	x, 4
+x:
+	.space	4
 	.text
 	.align	2
 	.global	main
@@ -38,7 +45,7 @@ main:
 	add	fp, sp, #4
 	.pad #8
 	sub	sp, sp, #8
-	mov	r0, #200
+	mov	r0, #101
 	bl	_Z3sumi
 	mov	r3, r0
 	str	r3, [fp, #-8]
@@ -107,8 +114,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	.syntax unified
 	.arm
 	.fpu vfp
-	.type	_GLOBAL__sub_I_main, %function
-_GLOBAL__sub_I_main:
+	.type	_GLOBAL__sub_I_x, %function
+_GLOBAL__sub_I_x:
 	.fnstart
 .LFB1995:
 	@ args = 0, pretend = 0, frame = 0
@@ -125,10 +132,10 @@ _GLOBAL__sub_I_main:
 	.word	65535
 	.cantunwind
 	.fnend
-	.size	_GLOBAL__sub_I_main, .-_GLOBAL__sub_I_main
+	.size	_GLOBAL__sub_I_x, .-_GLOBAL__sub_I_x
 	.section	.init_array,"aw"
 	.align	2
-	.word	_GLOBAL__sub_I_main
+	.word	_GLOBAL__sub_I_x
 	.hidden	__dso_handle
 	.ident	"GCC: (Raspbian 8.3.0-6+rpi1) 8.3.0"
 	.section	.note.GNU-stack,"",%progbits

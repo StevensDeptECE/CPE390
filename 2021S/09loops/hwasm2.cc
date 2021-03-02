@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//     r0         r0,   r1
 extern int sum(int a, int b); // _Z3sumii
 
 int main() {
