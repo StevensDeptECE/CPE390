@@ -35,7 +35,7 @@ void build1bppBitmap() {
 }
 
 void buildIndexedBitmap() {
-	png::image< png::index_pixel > image(200,100);
+	png::image< png::index_pixel > image(200,100); // 200 pixels wide x 100 high
 	png::palette pal(256);
 	pal[0] = png::color(0,0,0);
 	pal[1] = png::color(255,0,0);
