@@ -1,0 +1,21 @@
+r0     r0        d0
+int f(int a, double b);
+
+        r0       d0          r1      r2
+void g(int a, double b, double c[], int d);
+
+
+d0         s0       s1      d1
+double h(float x, float y, double z);
+
+
+
+double mean(double x[], int len) {
+
+	double sum = 0;
+	for (int i = 0; i < len; i++)
+		sum += x[i];
+	return sum / len;
+	// vcvt.f32.i32 s0, r0 first convert to single
+	//vcvt.f64.f32 d0, s0  now convert to double
+}
