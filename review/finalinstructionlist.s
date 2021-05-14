@@ -103,6 +103,7 @@ f:
 	b	1f
 	bl	f
 	vldr.f64	d0, [r0]
+	vldr.f64	d0, zero
 	vmov.f64	d0,d1		@d0 = d1
 	vabs.f64	d0,d1		@d0 = abs(d1)
 	vsqrt.f64	d0,d1		@d0 = sqrt(d1)
@@ -120,6 +121,9 @@ f:
 X:
 	.word	0xFFFAAFFF
 
+zero:
+	.word	0x00000000
+	.word	0x00000000
 
 
 	/*
