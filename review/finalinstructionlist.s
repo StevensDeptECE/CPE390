@@ -20,8 +20,8 @@ f:
 	str	r1, [r0], #8
 	ldrb	r1, [r0]	@load a single byte into the load order byte
 	strb	r1, [r0]	@corresponding store
-	@TODO: add preincrement
-	@TODO: ldm, stm (load and store multiple registers)
+	@TODO not 2021S: add preincrement
+	@TODO not 2021S: ldm, stm (load and store multiple registers)
 	
 	pop	{r4}		@pop one register
 
@@ -65,8 +65,8 @@ f:
 	@
 	@
 
-	@rbit	r0,r1		@reverse bits *** NOT ON FINAL
-	@ rbit only works in 64 bit mode ARMv8
+	@TODO: reverse bits is for the future, not 2021S final
+	rbit	r0,r1		
 	
 	rsb	r0, r1, #4
 	mul	r0, r1, r2
@@ -103,17 +103,29 @@ f:
 	b	1f
 	bl	f
 	vldr.f64	d0, [r0]
-	vmov.f64	d0,d1
-	vabs.f64	d0,d1
-	vsqrt.f64	d0,d1
-	vadd.f64	d0,d1,d2
-	vsub.f64	d0,d1,d2
-	vmul.f64	d0,d1,d2
-	vdiv.f64	d0,d1,d2
-	vmla.f64	d0,d1,d2
+	vmov.f64	d0,d1		@d0 = d1
+	vabs.f64	d0,d1		@d0 = abs(d1)
+	vsqrt.f64	d0,d1		@d0 = sqrt(d1)
+	vsqrt.f64	d0,d0		@d0 = sqrt(d0)
+	vadd.f64	d0,d1,d2	@d0 = d1+d2
+	vsub.f64	d0,d1,d2	@d0 = d1-d2
+	vmul.f64	d0,d1,d2	@d0 = d1*d2
+	vdiv.f64	d0,d1,d2	@d0 = d1/d2
+	vmla.f64	d0,d1,d2	@d0 = d0 + d1 * d2
+	vmls.f64	d0,d1,d2	@d0 = d0 - d1 * d2
 	
 1:	
 
 
 X:
 	.word	0xFFFAAFFF
+
+
+
+	/*
+	ARM Neon vector instructions, not needed for final but collecting for next year
+
+	*/
+
+	add	v10.4s, v9.4s, v8.4s	@v10 = v9 + v8 (4 32 bit float)
+	
