@@ -1,6 +1,6 @@
+#include "sumsqdiff.h"
 #include <immintrin.h>
 #include <iostream>
-
 using namespace std;
 
 double hsum_double_avx(__m256d v) {
@@ -12,11 +12,13 @@ double hsum_double_avx(__m256d v) {
   return _mm_cvtsd_f64(_mm_add_sd(vlow, high64)); // reduce to scalar
 }
 
-double computeMean(const double x[], uint64_t len) {
-  double sum = 0;
-  for (uint64_t i = 0; i < len; i++)
-    sum += x[i];
-  return sum / len;
+double computeMean(const double* x, uint64_t len) {
+  __m256d sum = _mm256_setzero_pd();
+   for (uint64_t i = len; i > 0; i -= 4, x += 4) {
+     __m256d xi = _mm256_load_pd(x);          // load 4 values from memory
+     sum = _mm256_add_pd(sum, xi);
+   }
+   return hsum_double_avx(sum)/ len;
 }
 
 //                   %rsi           %rdi
@@ -32,12 +34,5 @@ double sumSqDiff(const double *x, uint64_t len) {
 
     // sum = _mm256_fmadd_pd(del, del, sum);
   }
-  //  return hsum_double_avx(sum);
-
-  return _mm256_cvtsd_f64(sum);
-}
-
-int main() {
-  double x[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.5, 12};
-  cout << sumSqDiff(x, sizeof(x) / sizeof(double)) << '\n';
+  return hsum_double_avx(sum);
 }
