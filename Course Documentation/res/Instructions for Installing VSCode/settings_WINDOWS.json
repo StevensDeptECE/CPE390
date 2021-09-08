@@ -55,5 +55,8 @@
         "preLaunchTask": "C/C++: g++.exe build active file"
       }
     ]
-  }
+  },
+  "C_Cpp.default.browse.path": [
+    "C:\\msys64\\mingw64\\x86_64-w64-mingw32\\include"
+  ]
 }
