@@ -1,0 +1,39 @@
+r0 to r15 are all 32-bit registers
+
+hexadecimal = base 16
+
+0	    0000
+1	    0001
+2	    0010
+3 	    0011
+4	    0100
+5	    0101
+6	    0110
+7	    0111
+8	    1000
+9	    1001
+A	    1010
+B	    1011
+C	    1100
+D	    1101
+E	    1110
+F	    1111
+
+0xFF2ECD15  in ARM assembler use the same 0x as in C++
+1111 1111 0010 1110 1100 1101 0001 0101
+
+
+
+1101 1001 1010 0010 0111 1000
+
+
+
+1, 2, 4, 8, 16, 32, 64, 128
+131 decimal to binary = 10000011   Maximum we ask is 255
+631
+4268421
+1101000 = 64+32+8 = 104
+
+0xFEDC
+0xfedc
+0xFeDC
