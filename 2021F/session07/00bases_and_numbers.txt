@@ -1,0 +1,86 @@
+10101010101110110101010
+
+integer (signed/unsigned)
+floating point
+
+convert
+
+101010101 <--> decimal
+hexadecimal
+octal
+
+123  base 10
+
+    64  8   1
+0   1   2   3 base 8 (octal) leading zero
+
+0x123ABCDEF
+
+
+converting binary to decimal
+    8421
+10100101 --> decimal
+       1 + 4 + 32 + 128 = 165
+4+1=5*2=10*2=20*2+1=41*2=82*2+1=165
+
+1100011 = ? 1*2+1 = 3 * 2 = 6 * 2 = 12 *2 = 24 * 2+1 = 49 *2+1 = 99
+10110100
+
+
+
+
+131 = 10000011
+
+
+hex
+
+0	0000
+1	0001
+2	0010
+3	0011
+4	0100
+5	0101
+6	0110
+7	0111
+8	1000
+9	1001
+A	1010
+B	1011
+C	1100	
+D	1101
+E	1110
+F	1111
+
+0xDEADBEEF
+  1101 1110 1010 1101 1011 1110 1110 1111
+
+'A' = 65 0x41 
+
+
+  0x2b or not 0x2b that is 0xFF
+
+    0010 1011
+NOT 1101 0100
+=============
+    1111 1111
+A	B	A OR B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+1001 1100 1010 1011 1111 0001 0010 0100
+ 9    C    A    B    F     1    2   4
+ 
+000
+001
+010
+011
+100
+101
+110
+111
+
+chmod -x foo  (remove executable from everyone)
+chmod ugo-w foo
+

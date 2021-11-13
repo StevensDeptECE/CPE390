@@ -7,7 +7,7 @@ int f(int x) {
 }
 
 int sumAtoB(int a, int b) {
-
+  return 0;
 }
 
 int sumArray(int a[], uint32_t len) {
@@ -17,8 +17,8 @@ int sumArray(int a[], uint32_t len) {
 
 
 int main() {
-  uint64_t a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  cout << sumArray(a, sizeof(a)/sizeof(uint64_t))
+  int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  cout << sumArray(a, sizeof(a)/sizeof(int)) << '\n';
   int sum;
   for (int i = 0; i < sizeof(a)/sizeof(int); i++)
     sum += a[i];  // i[a]
