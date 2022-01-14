@@ -1,6 +1,0 @@
-	4 flags in CPSR (Complicated? Processor Status Register)
-
-	N negative
-	V overflow
-	Z zero
-	C carry
