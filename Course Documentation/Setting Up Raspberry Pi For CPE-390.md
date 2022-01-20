@@ -18,7 +18,7 @@
 2. Get an account on [GitHub](https://github.com/). You should get a [student account](https://education.github.com/pack), which will give you GitHub pro and allow you to use GitHub actions for CI/CD, which you should learn on your own at some point.
 3. Prepare to install the Raspberry Pi OS
 
-   1. [Download `Raspberry Pi OS (32-bit) with desktop`](https://www.raspberrypi.org/downloads/raspberry-pi-os/). Unless you plan to use your Pi for word processing, the `... and recommended software` doubles the size of the OS
+   1. [Download `Raspberry Pi OS (64-bit) with desktop`](https://www.raspberrypi.org/downloads/raspberry-pi-os/). Unless you plan to use your Pi for word processing, the `... and recommended software` doubles the size of the OS
    2. Decompress the Zip File
    3. Download and install [Balena Etcher](https://www.balena.io/etcher/), a free utility that flashes images onto drives.
 
