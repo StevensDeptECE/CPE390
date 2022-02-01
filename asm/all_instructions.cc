@@ -3,6 +3,8 @@
 #include <cmath>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 using namespace std;
 /*
@@ -45,7 +47,7 @@ int f1_4(int x, int y) {
 }
 
 int f1_5(int x, int y) {
-	return x / y;
+	return x % y;
 }
 
 int f1_6(int x) {
@@ -109,12 +111,52 @@ uint64_t f2_4(uint64_t a, uint64_t b) {
 }
 
 uint64_t f2_5(uint64_t a, uint64_t b) {
-	return a / b;
+	return a % b;
 }
 
 uint64_t f2_6(uint64_t a) {
 	return -a;
 }
+
+
+uint64_t f2_7(uint64_t a, uint64_t b) {
+	return a & b; // bitwise and
+}
+
+uint64_t f2_8(uint64_t a, uint64_t b) {
+	return a | b; // bitwise or
+}
+
+uint64_t f2_9(uint64_t a, uint64_t b) {
+	return a ^ b; // bitwise xor
+}
+
+uint64_t f2_10(uint64_t a) {
+	return ~a; // bitwise and
+}
+
+uint64_t f2_11(uint64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+uint64_t f2_12(uint64_t a) {
+	return a >> 7; // right shift (signed)
+}
+
+uint64_t f2_13(uint64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+/*
+	gcc will recognize that shifting left by k, ored  with shifting 
+	right by word size-k is actually a rotation. 
+	This will only work with the optimizer on
+*/
+uint64_t f2_14(uint64_t a, uint64_t b) {
+	return (a << 7) | (a >> 25); // rotation left by 7 = rotate right by 25
+}
+
+
 
 
 // f3 series: double precision floating point
@@ -134,47 +176,43 @@ double f3_4(double a, double b) {
 	return a / b;
 }
 
-double f3_5(double a, double b) {
-	return a / b;
-}
-
-double f3_6(double a) {
+double f3_5(double a) {
 	return -a;
 }
 
-double f3_7(double a) {
+double f3_6(double a) {
 	return sqrt(a);
 }
 
-double f3_8(double a) {
+double f3_7(double a) {
 	return sin(a);
 }
 
-double f3_9(double a) {
+double f3_8(double a) {
 	return cos(a);
 }
 
-double f3_10(double a, double b) {
+double f3_9(double a, double b) {
 	return sqrt(a*a + b*b);
 }
 
-double f3_11(double a, double b) {
+double f3_10(double a, double b) {
 	return pow(a,b);
 }
 
-double f3_12(double a) {
+double f3_11(double a) {
 	return exp(a);
 }
 
-double f3_13(double a) {
+double f3_12(double a) {
 	return log(a);
 }
 
-double f3_14(double a) {
+double f3_13(double a) {
 	return abs(a);
 }
 
-double f3_15(double a, double b) {
+double f3_14(double a, double b) {
 	return max(a,b);
 }
 
@@ -195,7 +233,6 @@ float f4_3(float a, float b) {
 float f4_4(float a, float b) {
 	return a / b;
 }
-
 
 // f5: double/integer conversion
 int f5_1(double a) {
@@ -290,6 +327,13 @@ double f8_5(double a, double b, double c, double d, double e) {
 	return a + b + c + d + e;
 }
 
+
+// combination of pointer, integer, double and float parameters
+double f8_6(const double* a, double b, uint64_t c, float d, double e) {
+	return a[3] + b + c + d + e;
+}
+
+
 // f9: array manipulation
 
 int f9_sum(const int arr[], int len) {
@@ -300,10 +344,10 @@ int f9_sum(const int arr[], int len) {
 }
 
 int f9_sum(const char s[], int len) {
-	int s = 0;
+	int sum = 0;
 	for (int i = 0; i < len; i++)
-		s += arr[i];
-	return s;
+		sum += s[i];
+	return sum;
 }
 
 void f9_demean(double arr[], int len) {
@@ -334,12 +378,12 @@ void f10_1(const double arr[], uint32_t len, double& mean,
 
 //f11: system calls use software traps
 void f11() {
-	in fh = open("test.dat", O_WRONLY);
+	int fh = open("test.dat", O_WRONLY);
 	const char msg[] = "testing";
 	int bytes_written = write(fh, msg, sizeof(msg));
 	cout << "wrote " << bytes_written << '\n';
 	close(fh);
-	mkdir("temp"); // create a directory
+	mkdir("temp", 0700); // create a directory
 }
 
 //f12 how statements are implemented
@@ -359,7 +403,7 @@ void f12_for(int n) {
 // the optimizer will eliminate this loop since there is an analytical equation
 int f12_for_optimized1(int n) {
 	int sum = 0;
-	for (int i = 1; i <= n; i++) {
+	for (int i = 1; i <= n; i++) {  // this is n(n+1)/2
 	  sum += i;
 	}
 	return sum;
@@ -372,7 +416,12 @@ int f12_for_optimized2(int n) {
 	return 5;
 }
 
-// the optimizer is not smart enough to optimize this stupid code. can you?
+/* the optimizer is not smart enough to optimize this stupid code. can you?
+  1 2 3 = 6 
+  2 4 6 = 12
+	3 6 9 = 18
+	total = 36
+*/
 int f12_nested_for(int n) {
 	int sum = 0;
 	for (int i = 1; i <= n; i++) {
@@ -388,9 +437,7 @@ public:
 	double x, y, z;
 	// this constructor is inline so code is only generated when used
 	vec3d(double x, double y, double z) : x(x), y(y), z(z) {}
-	vec3d add(vec3d b) const {
-		return vec3d(x+b.x, y + b.y, z + b.z);
-	}
+	vec3d add(vec3d b) const;
 	friend vec3d operator +(vec3d a, vec3d b) {
 		return vec3d(a.x+b.x,a.y+b.y,a.z+b.z);
 	}
@@ -407,7 +454,13 @@ int main() {
 	double x, y, z;
 	// read in from keyboard so optimizer does not know what is in x,y,z
 	cin >> x >> y >> z;
-	vec3d v(x,y,z); // create an object
-	cout << v.mag() << '\n';
-	cout << v.add() << '\n';
+	vec3d v1(x,y,z); // create an object
+	cout << v1.mag() << '\n';
+	cout << mag(v1) << '\n';
+	vec3d v2(x+1,y+2,z-1); // create an object
+	cout << v1.add(v2) << '\n';
+}
+
+vec3d vec3d::add(vec3d b) const {
+	return vec3d(x+b.x, y + b.y, z + b.z);
 }

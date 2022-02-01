@@ -37,7 +37,9 @@ Microsoft VS Code is a great text editor that will allow you to work on my compu
 
 Git ([Windows Download Link](https://git-scm.com/)) is a version control software. Using git, you can go back and get every version of what you have written. If you host it somewhere else (like github, see below) then if your computer breaks, is lost or stolen, you can retrieve all your work. Git is the most popular version control system today and something every programmer needs to know, which is why I use it in all my courses.
 
-[If you need help, please refer to this document](https://docs.google.com/presentation/d/1kSknsnRPqe1-DSIx-r9alMr1drEHzgzzXxqCkdlnHGk/edit#slide=id.p)
+[Help using git](https://docs.google.com/document/d/1WOJqA5Vdo9QbeYMGn8pN1B8Uo8-1EnfZAMCAdkDKjFk/edit?usp=sharing)
+If you want to really learn git you can also read the manual, but that's a real book (350 pages).
+[Git manual](https://git-scm.com/docs/user-manual)
 
 You will also need a Github account. Github is a website that offers online hosting of git repositories. All my class examples are hosted on git, and in some cases you will be asked to submit larger homeworks using git. In any case as a programmer, this is something everyone should know. [Link to get an educational GitHub account (free features)](https://education.github.com/)
 
@@ -58,7 +60,7 @@ We will start with a quick review of C++ and then dive in and see how it generat
 
 | Hardware (You only need ONE Raspberry Pi, either 3B+ or 4)                                                                                                | Available From                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MicroSD card (minimum 4GB, 8Gb is better)<br>If you plan on using your Pi in future, 16 or more might be useful (opencv required a 32 gb card to compile) | [Sandisk Card with Adapter](https://www.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/)                                                                    |
+| MicroSD card (minimum 8Gb, 16Gb is better)<br>If you plan on using your Pi in future, more might be useful (opencv required a 32 gb card to compile) | [Sandisk Card with Adapter](https://www.amazon.com/Sandisk-Ultra-Micro-UHS-I-Adapter/dp/B073K14CVB/)                                                                    |
 | Raspberry Pi 3B+ with Power Supply<br>(probably no longer the cheapest, perhaps no longer made. not as good as the 4 but runs cooler)                     | [CanaKit Basic Kit](https://www.amazon.com/CanaKit-Raspberry-Premium-Clear-Supply/dp/B07BC7BMHY/)                                                                       |
 | Raspberry Pi 4 with Power Supply<br><br>You will need to purchase a mini HDMI to HDMI adapter to use with our monitors.                                   | [CanaKit Basic Kit (2gb RAM)](https://www.amazon.com/CanaKit-Raspberry-Basic-Kit-2GB/dp/B07TYK4RL8/)                                                                    |
 | Highly Recommended Card reader/writer if you do not have one.                                                                                             |
