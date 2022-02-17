@@ -1,0 +1,8 @@
+byte: 8 bits   1010 1111
+               1011 1111 = 
+parity         even  --> always make even number of 1
+               1010 1111  p = 0
+	       1110 1111  p = 1
+	       0000 0001  p = 1
+
+ECC	       hardware error correction (2 bits)
