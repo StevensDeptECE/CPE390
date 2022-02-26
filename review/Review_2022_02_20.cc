@@ -77,6 +77,7 @@ double count(double a, double b, uint32_t num_steps) {
 
 void bugs() {
 	uint32_t ans = prod(1000000, 2000000);
+	uint64_t big = 50000*50000;
 	cout << ans << '\n';
 	cout << "sum(10)=" << sum(10) << '\n';
   cout << "yes_or_no=" << yes_or_no(10.0, 100) << '\n';
