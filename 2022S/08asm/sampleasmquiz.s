@@ -4,7 +4,16 @@
 	add 1 to each element in the array
 
 	*/
+	.global	_Z6addonePKii
+	//x0=array  w1 = len
+_Z6addonePKii:	
+	ldr  w3, [x0] // load memory into w3
 
+
+	sub w1, w1, 1
+	
+	
+	
 	/*
 take home quiz....
 2. 
