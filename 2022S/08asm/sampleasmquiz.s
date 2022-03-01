@@ -6,12 +6,15 @@
 	*/
 	.global	_Z6addonePKii
 	//x0=array  w1 = len
-_Z6addonePKii:	
+_Z6addonePKii:
+loop:	
 	ldr  w3, [x0] // load memory into w3
-
-
+        add  w3, w3, 1 // add 1 to the number
+	str  w3, [x0] // write it back
+        add  x0, x0, 4 // advance by 4 bytes
 	sub w1, w1, 1
-	
+	cmp w1, 0
+	bgt loop
 	
 	
 	/*

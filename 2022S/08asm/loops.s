@@ -9,13 +9,12 @@ f:
 	cmp	w1, 0
 	bne	1b
 	ret
-
 	.global f2
 	// w0 = n
 f2:
-	mov	w1, w0 // w1= n   for (int i = 0; i  <n; i++)
+	mov	w1, w0 // w1= n  
 	mov	w0, 0	//sum = 0
-	mov	w2, 1
+	mov	w2, 1   // for (int i = 1; i  <=n; i++)
 loop2:
 	add	w0, w0, w2 // sum = sum + i
 	add	w2, w2, 1 // w2=w2+1 
