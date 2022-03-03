@@ -158,6 +158,70 @@ uint64_t f2_14(uint64_t a, uint64_t b) {
 
 
 
+// f2b series: 64-bit signed arithmetic
+int64_t f2b_1(int64_t a, int64_t b) {
+	return a + b;
+}
+
+int64_t f2b_2(int64_t a, int64_t b) {
+	return a - b;
+}
+
+int64_t f2b_3(int64_t a, int64_t b) {
+	return a * b;
+}
+
+int64_t f2b_4(int64_t a, int64_t b) {
+	return a / b;
+}
+
+int64_t f2b_5(int64_t a, int64_t b) {
+	return a % b;
+}
+
+int64_t f2b_6(int64_t a) {
+	return -a;
+}
+
+
+int64_t f2b_7(int64_t a, int64_t b) {
+	return a & b; // bitwise and
+}
+
+int64_t f2b_8(int64_t a, int64_t b) {
+	return a | b; // bitwise or
+}
+
+int64_t f2b_9(int64_t a, int64_t b) {
+	return a ^ b; // bitwise xor
+}
+
+int64_t f2b_10(int64_t a) {
+	return ~a; // bitwise and
+}
+
+int64_t f2b_11(int64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+int64_t f2b_12(int64_t a) {
+	return a >> 7; // right shift (signed)
+}
+
+int64_t f2b_13(int64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+/*
+	gcc will recognize that shifting left by k, ored  with shifting 
+	right by word size-k is actually a rotation. 
+	This will only work with the optimizer on
+*/
+int64_t f2b_14(int64_t a, int64_t b) {
+	return (a << 7) | (a >> 25); // rotation left by 7 = rotate right by 25
+}
+
+
 
 // f3 series: double precision floating point
 double f3_1(double a, double y) {
