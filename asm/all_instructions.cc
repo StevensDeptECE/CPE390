@@ -221,12 +221,9 @@ int64_t f2b_13(int64_t a) {
 	right by word size-k is actually a rotation. 
 	This will only work with the optimizer on
 */
-int64_t f2_14(int64_t a, int64_t b) {
+int64_t f2b_14(int64_t a, int64_t b) {
 	return (a << 7) | (a >> 25); // rotation left by 7 = rotate right by 25
 }
-
-
-
 
 
 
