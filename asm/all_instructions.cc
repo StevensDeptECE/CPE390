@@ -92,7 +92,6 @@ int f1_14(int a, int b) {
 }
 
 
-
 // f2 series: 64-bit unsigned arithmetic
 uint64_t f2_1(uint64_t a, uint64_t b) {
 	return a + b;
@@ -158,10 +157,82 @@ uint64_t f2_14(uint64_t a, uint64_t b) {
 
 
 
+/*
+most signed arithmetic is the same, but not multiply, divide, and shifting
+
+*/
+
+// f2b series: 64-bit signed arithmetic
+int64_t f2b_1(int64_t a, int64_t b) {
+	return a + b;
+}
+
+int64_t f2b_2(int64_t a, int64_t b) {
+	return a - b;
+}
+
+int64_t f2b_3(int64_t a, int64_t b) {
+	return a * b;
+}
+
+int64_t f2b_4(int64_t a, int64_t b) {
+	return a / b;
+}
+
+int64_t f2b_5(int64_t a, int64_t b) {
+	return a % b;
+}
+
+int64_t f2b_6(int64_t a) {
+	return -a;
+}
+
+
+int64_t f2b_7(int64_t a, int64_t b) {
+	return a & b; // bitwise and
+}
+
+int64_t f2b_8(int64_t a, int64_t b) {
+	return a | b; // bitwise or
+}
+
+int64_t f2b_9(int64_t a, int64_t b) {
+	return a ^ b; // bitwise xor
+}
+
+int64_t f2b_10(int64_t a) {
+	return ~a; // bitwise and
+}
+
+int64_t f2b_11(int64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+int64_t f2b_12(int64_t a) {
+	return a >> 7; // right shift (signed)
+}
+
+int64_t f2b_13(int64_t a) {
+	return a << 7; // left shift (signed)
+}
+
+/*
+	gcc will recognize that shifting left by k, ored  with shifting 
+	right by word size-k is actually a rotation. 
+	This will only work with the optimizer on
+*/
+int64_t f2_14(int64_t a, int64_t b) {
+	return (a << 7) | (a >> 25); // rotation left by 7 = rotate right by 25
+}
+
+
+
+
+
 
 // f3 series: double precision floating point
-double f3_1(double a, double y) {
-	return a + y;
+double f3_1(double a, double b) {
+	return a + b;
 }
 
 double f3_2(double a, double b) {
@@ -214,6 +285,10 @@ double f3_13(double a) {
 
 double f3_14(double a, double b) {
 	return max(a,b);
+}
+
+double f3_15(double a, double b, double c) {
+	return a*b+c;
 }
 
 
@@ -416,6 +491,77 @@ int f12_for_optimized2(int n) {
 	return 5;
 }
 
+// this for loop can be optimized because the number is a constant
+int f12_for_optimized2() {
+	int sum = 0;
+	for (int i = 1; i <= 100; i++) {
+		sum += i;
+	}
+	return sum;
+}
+
+int f12_while2(int n) { // should be identical to f12_for_optimized1
+	int sum = 0;
+	int i = 1;
+	while (i <= n) {
+		sum += i;
+		i++;
+	}
+	return sum;
+}
+
+void f();
+
+void f12_call_function_in_loop() {
+	for (int i = 0; i < 10; i++) // this loop cannot be optimized away
+		f();                       // because the compiler does not know what f() does
+}
+
+void f12_call_func() {
+	f12_call_function_in_loop();
+}
+
+int f12_do_while(int n) {
+	int sum = 0;
+	int i = 1;
+	do {
+	  sum += i;
+	} while (i++ <= n);
+	return sum;
+}
+
+int f12_switch(int n) {
+	switch(n) {
+	case 1:
+		return 5;
+	case 2:
+		return 3;
+	case 3:
+		return 6;
+	case 4:
+		return 17;
+	default:
+		return 0;
+	}
+}
+
+int f12_switch2(int n) {
+	int s = 5;
+	switch(n) {
+	case 1:
+		s -= 4;
+	case 2:
+	  s += 1;
+	case 3:
+		s += 3;
+	case 4:
+		s++;
+ 	default:
+		s--;
+	}
+	return s;
+}
+
 /* the optimizer is not smart enough to optimize this stupid code. can you?
   1 2 3 = 6 
   2 4 6 = 12
@@ -450,7 +596,7 @@ public:
 	}
 };
 
-int main() {
+void testvec3d() {
 	double x, y, z;
 	// read in from keyboard so optimizer does not know what is in x,y,z
 	cin >> x >> y >> z;
@@ -463,4 +609,45 @@ int main() {
 
 vec3d vec3d::add(vec3d b) const {
 	return vec3d(x+b.x, y + b.y, z + b.z);
+}
+
+
+int param4(int a, int b, int c, int d) {
+	return a + b + c + d;
+}
+
+int param5(int a, int b, int c, int d, int e) {
+	return a + b + c + d + e;
+}
+
+int param8(int a, int b, int c, int d, int e, int f, int g, int h) {
+	return a + b + c + d + e + f + g + h;
+}
+
+int param9(int a, int b, int c, int d, int e, int f, int g, int h, int i) {
+	return a + b + c + d + e + f + g + h + i;
+}
+
+uint64_t param4(uint64_t a, uint64_t b, uint64_t c, uint64_t d) {
+	return a + b + c + d;
+}
+
+uint64_t param5(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e) {
+	return a + b + c + d + e;
+}
+
+uint64_t param8(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e, uint64_t f, uint64_t g, uint64_t h) {
+	return a + b + c + d + e + f + g + h;
+}
+
+uint64_t param9(uint64_t a, uint64_t b, uint64_t c, uint64_t d, uint64_t e, uint64_t f, uint64_t g, uint64_t h, uint64_t i) {
+	return a + b + c + d + e + f + g + h + i;
+}
+
+double param(int a, uint64_t b, int64_t c, double d, float e, int* f, const int x[], int& r) {
+  return a + b + c + d + e + *f + x[0] + r;
+}
+
+int main() {
+  testvec3d();
 }
