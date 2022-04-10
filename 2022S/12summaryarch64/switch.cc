@@ -7,6 +7,6 @@ int main() {
 	case 0: cout << "hello"; break;
 	case 1: cout << "test"; break;
 	case 2: cout << "bye"; break;
-	default:;
+
 	}
 }
