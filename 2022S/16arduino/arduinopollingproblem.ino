@@ -8,9 +8,15 @@ void setup() {
 }
 void loop() {
 	digitalWrite(2, HIGH);
-	delay(50); // 10ms = ??? .05
+	for (int i = 0; i < 50; i++) {
+		delay(1);
+		if (digitalRead(3) == HIGH) {
+
+		}
+	}
+		
 	digitalWrite(2, LOW);
-	delay(50); // 10MS = .05
+	delay(50);
 	if (digitalRead(3) == HIGH) {
 
 	}

@@ -18,6 +18,16 @@ void loop() {
 	
 	digitalWrite(3, HIGH); // will not work since you did not specify OUTPUT
 	int v = digitalRead(7);
+
+	while (v != LOW) { // THIS IS WRONG. Why?
+		// v never changes
+
+	}
+
+	while (digitalRead(7) != LOW) {
+		// this reads every time around
+	}
+	
 	if (v == HIGH || v == LOW) {
 		Serial.println("duh!"); // this takes 4 * 1/960th of a second
 	}
@@ -33,7 +43,7 @@ void loop() {
 	//	analogReadResolution(12); // set resolution if different than defaul 
 	int a = analogRead(A0); // read an analog input
 	// UNO: 10 bit accuracy, 7700 samples/second  0..1023
-	//Due: 12 bit accuracy, 1M s/s   84Mhz ARM 32-bit
+	//Due: 12 bit accuracy, 1M s/s   84Mhz ARM 32-bit  0..4095
 
 	/*
 		example: bullet going 180m/s length = 0.8cm = 0.008m
