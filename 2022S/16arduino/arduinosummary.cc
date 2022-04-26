@@ -57,3 +57,29 @@ void loop() {
 	//	analogWriteResolution(12); // set resolution if different than default
 	// for Arduino Due, you can write to two DAC pins to put out waveforms
 	analogWrite(DAC0, v); // v = 0 .. 4095
+
+	interrupts(); // enable interrupts
+
+	nointerrupts(); // disable interrupts
+	//https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
+
+	delay(500); // delay 500 milliseconds
+	delayMicroseconds(500500); // delay 1234 microseconds
+
+	int v = micros();
+	/*
+		while( beam for gate 1 not broke)
+     {}
+
+		t0 = micros();
+
+    while (beam for gate 2 not broken)
+    {}
+    t1 = micros();
+    dist  = ???
+ 
+
+   v= dist/(t1-t0)
+
+	 */	
+}
