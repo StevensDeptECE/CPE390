@@ -1,6 +1,0 @@
-1. Explain the difference between the von Neumann architecture and the Harvard architecture.
-
-2. Since ARM (like most computers) uses a von Neumann architecture, explain how Instruction cache (Icache) and Data caching (D-cache) make the computer faster. How much Icache and Dcache does the Raspberry pi have?
-
-3. How fast is accessing L1 cache vs. L2 cache?
-

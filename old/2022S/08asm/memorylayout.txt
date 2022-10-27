@@ -1,0 +1,43 @@
+Your computer is optimized to read/write on even memory alignment
+0   _ _ _ _ _ _ _ _
+8   _ _ _ _ _ _ _ _
+16  _ _ _ _ _ _ _ _
+24  _ _ _ _ _ _ _ _
+32  _ _ _ _ _ _ _ _
+40  _ _ _ _ _ _ _ _
+48  _ _ _ _ _ _ _ _
+56  _ _ _ _ _ _ _ _
+64 
+...
+
+	x0= 40
+	ldr w2, [x0]  loads w2 with [40,41,42,43]
+
+	ldr x2, [x0]  load x2 with [40,41,42,43,44,45,46,47]
+	x0 = 47
+	ldr w2, [x0]  this is SLOW [47  , then [48, 49, 50] (2 reads)
+
+
+for this reason a C++ compiler will do the following:
+
+sizeof(A) ==32
+class A {
+  int x;     // offset 0 + 4 bytes padding
+  double y;  // offset 8
+  char c;    // offset 16 + 7 bytes padding
+  double z;  // offset 24
+  };
+
+//how can you rearrange this to save memory
+
+sizeof(A)==24
+class A {
+  int x;
+  char c; // byte 5 +3 bytes padding
+  double y;
+  double z;
+  }
+
+bitmap homework
+
+rgbargbargba....

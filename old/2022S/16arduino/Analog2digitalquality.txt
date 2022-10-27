@@ -1,0 +1,10 @@
+Arduino Uno 10bit 7700 s/s
+Arduino Due 12bit 1M  s/s
+
+audio 20-20k   check out NYTimes article on high school students using high frequency ring tones in class
+
+Shannon: you must sample 2x frequency Nyquist Frequency
+
+CD  16 bit 44100 s/s
+DVD 20 bit audio 44100
+Pro 24 bit

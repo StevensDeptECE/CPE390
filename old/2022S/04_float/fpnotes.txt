@@ -1,0 +1,33 @@
+float	32
+sign = 1
+exponent = 8
+mantissa = 1 + 23
+
+x = +/-   2**(exponent - 127) * mantissa
+
+
+
+double	64
+sign = 1
+exponent = 11
+mantissa = 1 + 52
+
+double a = 1.0 / 0.0;  // inf
+double b = -3.0 / 0.0; // -inf
+double c = a + b; // NaN
+double d = sqrt(b); // NaN
+double e = 0.0 / 0.0; // Nan
+double f = a / a; // NaN
+double g = sqrt(a); // inf
+double h = sin(a); // Nan
+
+
+
+192.168.1.5
+
+192 168 1 5
+
+5  1 168 192
+
+
+
