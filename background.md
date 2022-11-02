@@ -31,10 +31,10 @@ float   // single precision floating point 32-bits, 1.2345678f
 double  // double precision 64 bits 1.23456789012345e+27
 ```
 
+## Integer operators and precedence
 ```cpp
-//operators
-/*
- ()
+/* PEMDAS: things on the same level go left to right
+  ()
   unary -
   * / %
   + -
@@ -43,9 +43,12 @@ double  // double precision 64 bits 1.23456789012345e+27
   a = a + 1; // add 1 to a
   a += 3;    // add 3 to a (shorthand)
   uint64_t b = 3;
-  uint64_t c = b++;  // first c=b, then b++
-  uint64_t d = ++b;
-  uint64_t e = sqrt(2); // library function, but it's in HARDWARE (cool!)
+  uint64_t c = 3 / 2 * 4; 
+  
+  
+  //extra
+  uint64_t x = b++;  // first c=b, then b++
+  uint64_t y = ++b;
 ```
 
 ### Arrays
@@ -68,6 +71,12 @@ while (x < 10) {
 
 for (int i = 0; i < 10; i++) { // this is just shorthand for while loop
   cout << i;
+}
+
+if (a < b) {
+  
+} else {
+
 }
 
 int y = 0;
