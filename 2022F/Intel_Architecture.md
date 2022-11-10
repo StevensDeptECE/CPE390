@@ -1,10 +1,43 @@
 # Intel Architecture Summary
 
+## Documentation
+
+[Intel documentation](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+[Intel instruction set](https://www.intel.com/content/www/us/en/developer/tools/isa-extensions/overview.html)
+[Best independent resource?](https://www.felixcloutier.com/x86/)
+[Wikipedia](https://en.wikipedia.org/wiki/X86_instruction_listings)
+[Penguin](http://www.penguin.cz/~literakl/intel/intel.html)
+
 ## Registers
 
 ### Integer Registers
 
 Each CPU has 16 integer registers
+
+|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|
+---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+rax|rbx|rcx|rdx|rsi|rdi|rbp|rsp|r8 |r9 |r10|r11|r12|r13|r14|r15|
+
+## Program Counter (PC)
+
+On Intel the program counter is called RIP (instruction pointer)
+
+The instruction about to be executed is the one at the address in rip.
+
+## Addressing Modes
+
+[See Intel](https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf)
+|Mode      | Example              | Description |
+|----------| ---------------------| ----------- |
+|immediate | mov $5, %rax         | use the constant in the instruction
+|reg-reg   | add %r9, %rax        | read and write registers only
+|indexed   | mov 8(%rsp), %rax     | read from memory 8 + rsp into rax
+|         | mov %rax, 24(rsp)    | same as above but writes to memory
+|         | mov %rax, 24(%r9, %r10,8)    | write to mem[r9 + 8*r10 + 24]
+| 
+     
+
+
 
 ### Vector Registers
 
@@ -25,12 +58,12 @@ Intel registers
 
 AX, BX, CX, DX, ..
 
-32-bit 
+32-bit registers start with e
 EAX, EBX, ECX, EDX, ESI, EDI, ...
 
-64-bit
+64-bit registers start with r
 
-RAX, RBX, RCX, RDX, RSI, RDI, ...  R9, R10, R11, R12, R13, R14, r15
+e registers are the low half of r
 
 ### Backward compatability of vector registers
 
