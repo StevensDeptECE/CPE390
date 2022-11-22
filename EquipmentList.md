@@ -43,10 +43,11 @@ Write C++ code         | [C++ review]() |
 Write C++ code Part 2 (Revenge of C++)         | [C++ review]() |
 Write Assembler code (Hackers unite!)         | [C++ review]() |
 Write Assembler code (Deeper in Hell!)         | [C++ review]() |
+Benchmark              |                |
+Crypto                 |                |
 Gravity Simulator      | floating point optimizations |
 Bitmap                 | writing to memory, o-o  |
 Eratosthenes' Sieve    | bit operations |
-
 Bomb Defuser           | assembler rev. eng |
 Crack my Software      | assembler, patch binary |
 gcode                  |               |
