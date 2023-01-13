@@ -21,7 +21,6 @@ We have a wide variety of software and hardware labs. While there are more than 
 1. Controlling motors using MOSFETs, H-Bridge controllers and Pulse Width Modulation (PWM)
 1. Generating waveforms using a DAC and measuring them
 1. Building a photogate using photoresistors and A/D converter
-1.  
 
 ## STUDENT LEARNING OUTCOMES
 
