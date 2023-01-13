@@ -180,3 +180,7 @@ point polar2rect2(double r, double theta) {
 	return {r * cos(theta), r * sin(theta)};
 }
 
+int main() {
+	double z = sumCosines(1024*1024);
+	cout << z << '\n';
+}

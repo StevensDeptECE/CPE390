@@ -30,7 +30,9 @@ The instruction about to be executed is the one at the address in rip.
 |Mode      | Example              | Description |
 |----------| ---------------------| ----------- |
 |immediate | mov $5, %rax         | use the constant in the instruction
-|reg-reg   | add %r9, %rax        | read and write registers only
+|immediate | addl $5, %eax         | add the constant to 32-bit register
+
+|reg-reg   | add %r9, %rax        | rax=rax+r9 read and write registers only
 |indexed   | mov 8(%rsp), %rax     | read from memory 8 + rsp into rax
 |         | mov %rax, 24(rsp)    | same as above but writes to memory
 |         | mov %rax, 24(%r9, %r10,8)    | write to mem[r9 + 8*r10 + 24]
