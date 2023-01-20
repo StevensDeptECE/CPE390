@@ -4,7 +4,7 @@
 * **Instructor:**  [Dov Kruger](bio.md)
 * **[Meeting Times and Office hours](officehours.pdf)
 * **[Resources](resources.md)**
-* **[Course Web Address](https://github.com/stevensdeptece/CPE593)**
+* **[Course Web Address](https://github.com/stevensdeptece/CPE390)**
 
 ## COURSE DESCRIPTION
 
@@ -27,7 +27,8 @@ After successful completion of this course, students will be able to
 * Practice a little using oscilloscopes
 * Record your designs using a CAD package
 * Optionally learn to use git to work in teams effectively.
-* Use a CAD package to record your hardware designs.
+* Use a CAD package to draw hardware designs.
+* Use LTSpice to analyze simple hardware designs.	
 
 
 ## FORMAT AND STRUCTURE
