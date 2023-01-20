@@ -1,0 +1,10 @@
+1. Write an assembler function that computes the following:
+
+Given two 64-bit numbers a,b
+Compute the average of the two
+
+3. Write an assembler function that computes the following:
+
+Given: 3 64-bit variables a,b,c
+Return the biggest of the 3
+
