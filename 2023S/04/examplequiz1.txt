@@ -1,0 +1,36 @@
+1. (50 points) Implement the following function to sum the
+   squares from a to b inclusive
+   For example sumsq(3, 7) = 3*3+4*4+5*5+6*6+7*7 (use a loop)
+
+int sumsq(int a, int b) {
+
+
+
+}
+
+2. (50 points) Write the following function to compute the
+   mean of the array, and subtract from all elements
+   double a[] = {1, 2, 3, 4};
+   given: demean(a, 4)
+   a should end up with {-1.5, -.5, +.5, 1.5}
+
+void  demean(double x[], int n) {
+
+}
+
+
+next one for assembler would be
+3. (50 points)
+
+main() {
+  int y = f(3,4);   // your function f should computer (3+4)*(3-4)
+
+}
+
+_Z1fii:
+	rcx, rdx, rsi, rdi
+
+
+	rax has the answer at the end
+	ret
+
