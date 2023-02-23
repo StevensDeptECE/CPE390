@@ -34,9 +34,9 @@ rbx = 4
 rcx = 5
 
 ```asm
-     push   %rbx   what changes?___________________________
+     push   %rbx   what changes? ___________________________
      mov    %rax, 8(%rsp)
      add    %rax, %rcx          _______________
      mov    %rcx, (%rsp)        _________________________
-     pop    %rbx 
+     pop    %rbx                _________________________
 ```
