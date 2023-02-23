@@ -36,7 +36,7 @@ After successful completion of this course, students will be able to
 * Read and write digital voltagese
 * Use power transistors and H-bridge controllers to drive motors
 * Use A/D and D/A converters to interact with the analog world
-* Practice a little using oscilloscopes
+* Practice using oscilloscopes to 
 * Learn to use git to work in teams effectively (a bit).
 * Use a CAD package to record your hardware designs.
 * Use LTSpice to analyze simple hardware designs.	
@@ -45,7 +45,7 @@ After successful completion of this course, students will be able to
 ## FORMAT AND STRUCTURE
 * Classes involve live coding demonstrations, you are encouraged to join in sometimes using vscode.
 * The instructor will ask questions and you are encouraged to actively participate.
-* There will be weekly coding homework and/or handwritten assignments.
+* There will be weekly coding homework/labs and/or handwritten assignments.
 * Quizzes and tests on paper verify that students know the material they have submitted as homework.
 
 ## COURSE MATERIALS
@@ -68,7 +68,7 @@ Grades will be based on:
 * Exams		              	            (60 %)
 
 [Grading Policies] (https://github.com/stevensdeptece/DovKrugerCourses/grading.md)
-[Academic Honesty and Discipline] (https://github.com/stevensdeptece/DovKrugerCourses/academichonesty.md)
+[Academic Honesty and Discipline] ([https://github.com/stevensdeptece/DovKrugerCourses/academichonesty.md](https://github.com/StevensDeptECE/DovKrugerCourses/blob/main/integrity.md)
 
 ## IMPORTANT DATES
 * Test 1           ** 2023-TBD **
