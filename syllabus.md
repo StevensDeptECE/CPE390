@@ -61,14 +61,14 @@ After successful completion of this course, students will be able to
 
 ## GRADING PROCEDURES
 Grades will be based on:
-* Programming Assignments             (15 %)
+* Programming Assignments            (15 %)
 * Homework Assignments	              ( 5 %)
-* Quizzes                             ( 0 %)
-* Labs	   		                        (20 %)
-* Exams		              	            (60 %)
+* Quizzes                            ( 0 %)
+* Labs	   		                         (20 %)
+* Exams		              	             (60 %)
 
-[Grading Policies] (https://github.com/stevensdeptece/DovKrugerCourses/grading.md)
-[Academic Honesty and Discipline] ([https://github.com/stevensdeptece/DovKrugerCourses/academichonesty.md](https://github.com/StevensDeptECE/DovKrugerCourses/blob/main/integrity.md)
+[Grading Policies] (https://github.com/StevensDeptECE/DovKrugerCourses/blob/main/grading.md)
+[Academic Honesty and Discipline] (https://github.com/StevensDeptECE/DovKrugerCourses/blob/main/integrity.md)
 
 ## IMPORTANT DATES
 * Test 1           ** 2023-TBD **
