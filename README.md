@@ -2,15 +2,12 @@
 # Microprocessor Systems: CPE 390 
 2021 Fall Stevens Institute of Technology
 
-* **Meeting Times:** 		Tueday 2:30-3:20, Thursday at 2:30-4:20
-* **Classroom Location:**	B123
-* **Instructor:** 		Teaching Associate Prof. Dov Kruger
-* **Contact Info:** 		Burchard Building 217, dkruger at stevens
-* **Teaching Assistant:**       Fan Yang (fyang14 at stevens)
-* **Office Hours:**		
-  * Dov Kruger: online, Wedneday 11-12 Thursday 11-12, 8pm-9pm, in person by appt
-  * Fan Yang:   Burchard Building 315, Mondays at 2.30pm-4.30pm and Wednesdays at 3.00pm-5.00pm
-
+* **Meeting Times:** 		   Tueday 2:30-3:20, Thursday at 2:30-4:20
+* **Classroom Location:**	see [DovKrugerSchedule]()
+* **Instructor:** 		      [Dov Kruger](https://github.com/StevensDeptECE/DovKrugerCourses/blob/main/DovKrugerResume.pdf)
+* **Contact Info:** 		    see [DovKrugerSchedule]()
+* **Teaching Assistant:** see [DovKrugerSchedule]()
+* **Office Hours:**		     see [DovKrugerSchedule]()
 * **Course Web Address:**	https://github.com/stevensdeptece/CPE390
 
 ## COURSE DESCRIPTION
@@ -23,9 +20,9 @@ of computers such as relative cost of different instructions, memory
 characteristics, cache, MMU, block-oriented devices, and calls to the
 OS to learn how to make computing faster. In addition, by learning the
 way the machine works, students will also learn what can go wrong, including
-overflow, roundoff errors, and segfaults.
+overflow, roundoff errors, segfaults and other delightful sources of errors.
 
-In the hardware component, students learn how to interface the computer,
+In the embedded systems component, students learn how to interface the computer,
 using an ARM-based Arduino microcontroller to control external devices and to measure external voltages.
 
 Throughout the course, emphasis is on preparing students to read
@@ -60,9 +57,9 @@ After successful completion of this course, students will be able to
 
 ## GRADING PROCEDURES
 Grades will be based on:
-* Programming Assignments             (5 %)
-* Homework Assignments	              (5 %)
-* Quizzes		              (10 %)
+* Programming Assignments      (5 %)
+* Homework Assignments	        (5 %)
+* Quizzes		                   (10 %)
 * Exams		              	      (80 %)
 
 Late Policy: Assignments submitted after the deadline will not be graded.
@@ -78,7 +75,7 @@ Late Policy: Assignments submitted after the deadline will not be graded.
     - the quality of the code                   (20 %)
     - inclusion of test codes                   (20 %)
     - reproducibility                           (10 %)
-* Final exam date: **12/12/2019 Thursday at 6.30pm in BC 319 **
+* Final exam date: ** TBD **
 
 ## ACADEMIC INTEGRITY 
 
@@ -119,11 +116,6 @@ Note that this policy is in accordance with the law. You are entitled
 to extra time, but even if it is stressful, I am entitled to ask you
 to take the first test in regular time provided I give you the
 opportunity to retest with have extra time.
-
-If you have any questions about the
-legality, please contact Phillip Gehman, the Director of Disability
-Services Coordinator at Stevens Institute of Technology at
-pgehman@stevens.edu or by phone (201) 216-3748.
 
 ## INCLUSIVITY 
 ### Name and Pronoun Usage 
