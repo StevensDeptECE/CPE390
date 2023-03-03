@@ -32,7 +32,7 @@ int main() {
 
    float t1 = 70.001;
    float t2 = 70.002;
-   float dt = t2 - t1; .0010 // subtractive
+   float dt = t2 - t1; // .0010 // subtractive
 
    long double x;
 
