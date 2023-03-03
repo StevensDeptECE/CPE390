@@ -8,7 +8,7 @@ rdx = 4
 |       | f7fabffac0 | 0000000000000003|
 |rsp--> | f7fabffab8 | 0000000000000004|
 
-
+```asm
 push rcx
 push rdx
 mov  $92, %rcx                      #rcx = 92
@@ -20,3 +20,5 @@ mov  8(%rsp), %rax  # rax = 3
 
 pop  rdx
 pop  rcx
+
+```
