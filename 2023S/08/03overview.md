@@ -7,7 +7,7 @@
 * int main()
 * cout
 * Variables
-* Integer portable data types int*\_t, uint*\_t (8,16,32,64)
+  * Integer portable data types int*\_t, uint*\_t (8,16,32,64)
 * g++
 
 ## Assembler Basics
