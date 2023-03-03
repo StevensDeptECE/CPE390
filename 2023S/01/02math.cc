@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 int main() {
     // int not guranteed size, not guaranteed sign
     {
