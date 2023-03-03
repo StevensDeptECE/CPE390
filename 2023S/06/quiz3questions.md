@@ -3,6 +3,7 @@
 This quiz is not being given in class. You can take it home and study.
 
 After each of the following instructions, state what is in the register
+
 ```asm
 main:
     mov  $3, %rcx
@@ -24,8 +25,8 @@ Write zero to every element of the array.
 1. Write a function that takes a pointer to an array of 64-bit numbers and 64-bit number with the length of the array
 Double every element of the array.
 
-
 New material (from today)
+
 1. Given the following registers, state which memory locations are written to, and what values are written:
 
 rsp = 0x7ff810080B0
