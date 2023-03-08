@@ -25,44 +25,53 @@ loop3:
     ret
 
 # read in from memory out of order
+#  rcx = pointing to array
+#  rdx = number of elemetns in the array
+#  r8  = number of times to do this
     .globl f4
 f4:
+    push %r10
+    mov  %rcx, %r10   # r10 remembers where the array starts
 loop4:
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
+    add  $256, %rcx
     mov  (%rcx), %rax  # read in memory 
-    add  $256, %rdx
-    sub  $8, %rdx
+    add  $256, %rcx
+    sub  $32, %rdx
     jnz  loop4
+    mov  %r10, %rcx   # back to the beginning!
+    sub  $1, %r8
+    jnz  loop4
+    
     ret
 
 
-    .globl main
-main:
-    leaq x, %rcx
-    mov $1000000000, %rdx
-    mov  %rsp, %rdx    #copy rsp so we can look at it
-    call f3
-    ret
+#    .globl main
+#main:
+#    leaq x, %rcx
+#    mov $1000000000, %rdx
+#    mov  %rsp, %rdx    #copy rsp so we can look at it
+#    call f3
+#    ret
 
-    .data
+#    .data
 #    .align 8   # align to 8-byte boundary
 #   .ascii "yo ho ho"
 #    .align 8   # align to 8-byte boundary
-x:
-    .word 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
+#x:
+#    .word 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0
 #y:
     #.double 1.0, 2.0, 3.0, 0.5, 0.25
 
