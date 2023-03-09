@@ -57,10 +57,9 @@ After successful completion of this course, students will be able to
 
 ## GRADING PROCEDURES
 Grades will be based on:
-* Programming Assignments      (5 %)
-* Homework Assignments	        (5 %)
-* Quizzes		                   (10 %)
-* Exams		              	      (80 %)
+* Labs and Programming Assignments (20 %)
+* Quizzes		                       (0 %)
+* Exams		              	         (80 %)
 
 Late Policy: Assignments submitted after the deadline will not be graded.
 
