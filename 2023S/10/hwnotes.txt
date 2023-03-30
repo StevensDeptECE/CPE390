@@ -1,0 +1,88 @@
+
+byte = 10101100
+       10101101
+
+       Error detection and correction (ECC)
+       10101100   p=0
+       11110001   p=1
+
+       10111111   p=0
+
+       10101001   p=0
+       10101111   p=0
+
+
+        10101100   p=1
+
+        Error correction
+
+
+
+FF 2C 3A B5 ...      checksum = sum MOD 256 
+FE 2D
+
+CRC = Cyclic Redundancy Check, 32bit
+change 32 bits
+
+
+digital signature
+
+1bit = D type flip flop
+clock,  D input,   propagation delay   Q output
+
+
+multiplexer
+
+register n- D-type flip flops
+
+
+fan-in limiting factor of how many inputs to one output
+
+fan-out limiting factor of how many inputs can be powered from one output
+
+show FET level design for
+AND  (ideally, without resistors, without BJT)
+OR
+XOR
+
+D-type flip flop
+half adder
+full adder
+
+
+demux (demultiplexer)
+
+half adder
+full adder
+
+111  1
+11011010
+10110011
+=======
+10001101
+
+
+
+ 999
++999
+====
+1998
+
+
+add
+adc  (add with carry)
+
+
+
+          1110
+         x0110
+         =====
+          0000
+         11100
+        1110
+       0000
+       ========
+
+       Seymour Cray
+
+       Cray Multiplier
